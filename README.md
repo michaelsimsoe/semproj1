@@ -4,7 +4,7 @@ Noroff  FEU1 - Semester Project 1
 The Gantt chart is made on Google Sheets. I've used the following formula to conditionally format the cells according to task length: `=AND(E$2<=$D5;E$2>=$C5)`
 
 | Variable       | Effect           |
-| ------------- |:-------------:|
+| ------------- |-------------:|
 | `=AND(E$2<=$D5;E$2>=$C5)`      | Conditionally format the cells according to task length |
 | _Date today_     | Conditionally format date if today      |
 | `=VLOOKUP(B7;TASKS!A:B;2;FALSE)` | Gets progress percentage from Task sheet      |

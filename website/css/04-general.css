@@ -1,0 +1,48 @@
+/* 04 General styles and variables 
+ * 4.1 Colors - variables
+ * 4.2 
+ * 4.3
+*/
+
+/* 4.1 Colors 
+ * Two primary colors, blue and yellow
+ * Three secondary colors, purple, orange-red and green
+ * All colors are with darker and lighter accents
+*/
+:root {
+  /* Primary color 1 - blue */
+  --prim-1-95: hsl(199, 76%, 95%);
+  --prim-1-85: hsl(199, 74%, 85%);
+  --prim-1-65: hsl(199, 73%, 65%);
+  --prim-1-55: hsl(199, 73%, 55%); 
+  --prim-1-45: hsl(199, 73%, 45%);
+  --prim-1-25: hsl(199, 73%, 25%);
+  /* Primary color 2 - yellow */
+  --prim-2-95: hsl(42, 100%, 95%);
+  --prim-2-85: hsl(42, 100%, 85%);
+  --prim-2-65: hsl(42, 100%, 65%);
+  --prim-2-55: hsl(42, 100%, 55%); 
+  --prim-2-45: hsl(42, 100%, 45%);
+  --prim-2-25: hsl(42, 100%, 25%);
+  /* Secondary color 1 - purple */
+  --sec-1-95: hsl(318, 52%, 95%);
+  --sec-1-85: hsl(199, 74%, 85%);
+  --sec-1-65: hsl(318, 51%, 65%);
+  --sec-1-55: hsl(318, 51%, 55%); 
+  --sec-1-45: hsl(318, 51%, 45%);
+  --sec-1-25: hsl(318, 51%, 25%);
+  /* Secondary color 2 - orange-red */
+  --sec-2-95: hsl(16, 85%, 95%);
+  --sec-2-85: hsl(17, 87%, 85%);
+  --sec-2-65: hsl(17, 88%, 65%);
+  --sec-2-55: hsl(17, 88%, 55%); 
+  --sec-2-45: hsl(17, 88%, 45%);
+  --sec-2-25: hsl(17, 88%, 25%);
+  /* Secondary color 3 - green */
+  --sec-3-95: hsl(73, 36%, 95%);
+  --sec-3-85: hsl(73, 37%, 85%);
+  --sec-3-65: hsl(72, 36%, 65%);
+  --sec-3-55: hsl(72, 36%, 55%); 
+  --sec-3-45: hsl(72, 36%, 45%);
+  --sec-3-25: hsl(72, 36%, 25%);
+}

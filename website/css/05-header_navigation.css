@@ -1,0 +1,14 @@
+/* 05 Header & Navigation 
+ * 5.1 Header
+ * 5.2 
+*/
+
+/* 5.1 Header */
+.main_header {
+  background-color: var(--prim-1-55);
+  color: var(--prim-2-55)
+}
+
+.main_header__subheading {
+  font-style: italic;
+}

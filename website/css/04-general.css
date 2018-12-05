@@ -1,7 +1,9 @@
 /* 04 General styles and variables 
  * 4.1 Colors - variables
  * 4.2 Utilities
- * 4.3 General styling
+ * 4.3 General styling - bacic elements
+ * 4.4 General styling - classes
+ * 4.5 Skip to main content
 */
 
 /* 4.1 Colors 
@@ -27,7 +29,7 @@
   --prim-2-25: hsl(42, 100%, 25%);
   /* Secondary color 1 - purple */
   --sec-1-95: hsl(318, 52%, 95%);
-  --sec-1-85: hsl(199, 74%, 85%);
+  --sec-1-85: hsl(318, 52%, 85%);
   --sec-1-65: hsl(318, 51%, 65%);
   --sec-1-55: hsl(318, 51%, 55%); 
   --sec-1-45: hsl(318, 51%, 45%);
@@ -58,8 +60,30 @@
   clear:both;
 }
 .wrapper {
-  margin: 0 15px;
+  margin: 0 10px;
 }
+
+/* 4.2.2 Margin & Padding helpers */
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.mt-15 {
+  margin-top: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: .5rem;
+}
+
+.m-5 {
+  margin: .5rem;
+}
+
+.p-10 {
+  padding: 1rem;
+}
+
 
 @media only screen and (min-width: 768px) {
   .wrapper {
@@ -79,7 +103,7 @@
   }
 }
 
-/* 4.3 General styling 
+/* 4.3 General styling - basic elements 
  * Styling common to all pages of site
 */
 html {
@@ -99,15 +123,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.7rem;
-}
-
-h2 {
   font-size: 2.5rem;
 }
 
+h2 {
+  font-size: 2.2rem;
+}
+
 h3 {
-  font-size: 2.1rem;
+  font-size: 2.0rem;
 }
 
 a {
@@ -126,6 +150,69 @@ a:visited {
   color: #782708;
 }
 
+/* 4.4 General styling - classes 
+ * Styling common to all pages of site
+*/
+
+.subheading {
+  color: var(--sec-1-45);
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.btn-link {
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 1.4rem .8rem;
+  width: 11rem;
+}
+
+.btn-link:visited, .btn-link:active, .btn-link:hover {
+  color: #fff;
+}
+
+.btn-link-purple {
+  background-color: var(--sec-1-55);
+}
+
+.btn-link-purple {
+  background-color: var(--sec-1-55);
+}
+
+.btn-link-purple:hover {
+  background-color: var(--sec-1-45);
+}
+
+.btn-link-purple:active {
+  background-color: var(--sec-1-25);
+}
+
+.btn-link-blue {
+  background-color: var(--prim-1-55);
+}
+
+.btn-link-blue {
+  background-color: var(--prim-1-55);
+}
+
+.btn-link-blue:hover {
+  background-color: var(--prim-1-45);
+}
+
+.btn-link-blue:active {
+  background-color: var(--prim-1-25);
+}
+
+
+/* 
+ * 4.5 Skip to main content for screen reader and keyboard-only users
+ * https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+ * https://www.w3.org/TR/WCAG20-TECHS/G1.html
+*/
 a.skip-main {
     left:-999px;
     position:absolute;
@@ -151,3 +238,4 @@ a.skip-main:focus, a.skip-main:active {
     font-size:1.2em;
     z-index:999;
 }
+

@@ -1,0 +1,49 @@
+/* 06 index.html - Front page 
+ * 6.1 Hero Image
+ * 6.2 Practical information
+ * 6.3 Introduction
+*/
+
+/* 6.1 Intro Section */
+.hero img {
+  max-width: 50%;
+  float: right;
+}
+
+/* 6.2 Practical information */
+.info {
+  background-color: hsl(0, 0%, 100%, 0.4);
+}
+
+.hours, .entrance {
+  border: var(--sec-1-25) solid 2px;
+}
+
+/* 6.3 Introduction */
+.intro p {
+  margin-top: .5rem;
+}
+
+/* 6.4 News */
+.news {
+  background-color: hsl(0, 0%, 100%, 0.4);
+}
+
+.news__item {
+  display: flex;
+  flex-direction: row;
+  max-height: 15rem;
+}
+
+.news__item img {
+  width: 100%;
+  max-width: 40%;
+  height: auto;
+}
+
+/* 6.5 Exhibitions */
+.exhibitions__single {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(0, 0%, 100%, 0.4);
+}

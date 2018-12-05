@@ -11,9 +11,11 @@
 </head>
 
 <body>
-<header>
-  <h1>Community Science Museum</h1>
-  <p>Exlore together</p>
+<header class="main_header">
+  <div class="wrapper">
+    <h1>Community <br>Science Museum</h1>
+    <p class="main_header__subheading">Exlore together</p>
+  </div>
   <a class="skip-main" href="#maincontent">Skip to main content</a>
 </header>
 <nav>
@@ -23,17 +25,18 @@
   <a href="./about.html">About Us</a>
   <a href="./involved.html">Get Involved</a>
 </nav>
-<section>
-  <img src="" alt="">
+<section class="hero clearfix wrapper">
+  <img src="./img/images/fasade_outside.jpg" alt="the colorfull outside of the museum">
   <div>
-    <blockquote>Hello</blockquote>
-    <blockquote>World</blockquote>
+    <blockquote>Science should not be confined to the <span>textbook</span>...</blockquote>
+    <blockquote>but brought to live through <span>exhibitions!</span></blockquote>
   </div>
 </section>
-<main id="maincontent">
-  <section>
-    <h2>Opening hours</h2>
-    <div>
+<main class="wrapper mt-10" id="maincontent">
+  <aside class="info p-10">
+    <h2>Practical Information</h2>
+    <div class="hours mt-10 p-10">
+      <h3>Opening hours</h3>
       <ul>
         <li>Monday: Closed</li>
         <li>Tuesday: 10:00 – 16:00</li>
@@ -44,7 +47,7 @@
         <li>Sunday: 9:00 – 13:00</li>
       </ul>
     </div>
-    <div>
+    <div class="entrance mt-10 p-10">
       <h3>Admission</h3>
       <p>
         The entrance is free for all.
@@ -57,16 +60,18 @@
         If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.
       </p>
     </div>
-  </section>
-  <section>
-    <h2>Introduction</h2>
+  </aside>
+  <article class="intro mt-15">
+    <header class="mb-5">
+      <h2>Come join us at the Community Science Museum</h2>
+      <p class="subheading">
+        where we’re committed to making science accessible to all.
+      </p>
+    </header>
     <p>
-      Come join us at the Community Science Museum where we’re committed to making science accessible to all.
-    </p>
-    <main>
       Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to
       exploring everything from galaxies far away to the very building blocks of life itself.
-    </main>
+    </p>
     <p>
       The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps
       even ignite a lifelong passion to continue the exploration of the world around us.
@@ -77,78 +82,102 @@
       you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to
       life at night when everyone’s gone home).
     </p>
-  </section>
-  <section>
-    <h2>News</h2>
-    <section>
-      <figure></figure>
-      <h2>Night at the museum</h2>
-      <p>
-        Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays.
+  </article>
+  <article class="news mt-15">
+    <header class="mb-5">
+      <h2>News</h2>
+      <p class="subheading">
+        Whats happening at the museum?
       </p>
-      <a href="/exhibitions.html#night">Read More</a>
+    </header>
+    <section class="news__item mt-10">
+      <img src="./img/images/mammoth.jpg" alt="great museum hall with mammoth on platau">
+      <div class="news__text m-5">
+        <h3>Night at the museum</h3>
+        <p>
+          Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays.
+        </p>
+        <a class="btn-link btn-link-purple" href="/exhibitions.html#night">Read More</a>
+      </div>
     </section>
-    <section>
+    <section class="news__item mt-10">
+      <img src="./img/images/pilot.jpg" alt="pilot inside cockpit">
+      <div class="news__text m-5">
+        <h3>Visiting Professor of Aeronautics</h3>
+        <p>
+          Prof Sheila Widnall from the Massachusetts Institute of Technology is visiting us to talk about the future of space.
+        </p>
+        <a class="btn-link btn-link-purple" href="/exhibitions.html#mit">Read More</a>
+      </div>
+    </section>
+    <section class="news__item mt-10">
+      <img src="./img/images/ball_pendulum.jpg" alt="a ball bendelum with oragne balls">
+      <div class="news__text m-5">
+        <h3>Energetica Exhibition on Loan</h3>
+        <p>
+          Experience the power of the elements as we harness them.
+        </p>
+        <a class="btn-link btn-link-purple" href="/exhibitions.html#power">Read More</a>
+      </div>
+    </section>
+  </article>
+  <article class="exhibitions mt-15">
+    <header>
+      <h2>Exhibitions</h2>
+      <p class="subheading">We offer a wide variety of exhibitions</p>
+    </header>
+    <section class="exhibitions__single mt-10">
       <figure></figure>
-      <h2>Visiting Professor of Aeronautics</h2>
-      <p>
-        Prof Sheila Widnall from the Massachusetts Institute of Technology is visiting us to talk about the future of space.
-      </p>
-      <a href="/exhibitions.html#mit">Read More</a>
+      <div class="exhibitions__text">
+        <h3>Cosmology</h3>
+        <p>
+          Explore the wonders of our cosmos.Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us.
+        </p>
+        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+      </div>
     </section>
-    <section>
+    <section class="exhibitions__single mt-10">
       <figure></figure>
-      <h2>Energetica Exhibition on Loan</h2>
-      <p>
-        Experience the power of the elements as we harness them.
-      </p>
-      <a href="/exhibitions.html#power">Read More</a>
+      <div class="exhibitions__text">
+        <h3>Evolution</h3>
+        <p>
+          For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here?
+        </p>
+        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+      </div>
     </section>
-  </section>
-  <section>
-    <h2>Exhibitions</h2>
-    <section>
+    <section class="exhibitions__single mt-10">
       <figure></figure>
-      <h2>Cosmology</h2>
-      <p>
-        Explore the wonders of our cosmos.Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us.
-      </p>
-      <a href="/exhibitions.html">Read More</a>
+      <div class="exhibitions__text">
+        <h3>Biology and Medicine</h3>
+        <p>
+          From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world.
+        </p>
+        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+      </div>
     </section>
-    <section>
+    <section class="exhibitions__single mt-10">
       <figure></figure>
-      <h2>Evolution</h2>
-      <p>
-        For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here?
-      </p>
-      <a href="/exhibitions.html">Read More</a>
+      <div class="exhibitions__text">
+        <h3>Robotics and AI</h3>
+        <p>
+          The information revolution is here and robotics and artificial intelligence are the science of the future.
+        </p>
+        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+      </div>
     </section>
-    <section>
+    <section class="exhibitions__single mt-10">
       <figure></figure>
-      <h2>Biology and Medicine</h2>
-      <p>
-        From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world.
-      </p>
-      <a href="/exhibitions.html">Read More</a>
+      <div class="exhibitions__text">
+        <h3>Ecology</h3>
+        <p>
+          As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
+        </p>
+        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+      </div>
     </section>
-    <section>
-      <figure></figure>
-      <h2>Robotics and AI</h2>
-      <p>
-        The information revolution is here and robotics and artificial intelligence are the science of the future.
-      </p>
-      <a href="/exhibitions.html">Read More</a>
-    </section>
-    <section>
-      <figure></figure>
-      <h2>Ecology</h2>
-      <p>
-        As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
-      </p>
-      <a href="/exhibitions.html">Read More</a>
-    </section>
-  </section>
-  <section>
+  </article>
+  <article>
     <h2>Get Involved</h2>
     <p>
       There are various ways you can support the museum. Donations are very welcome and are an important way we keep this
@@ -157,10 +186,10 @@
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt similique aliquam blanditiis possimus magni saepe laudantium numquam consectetur commodi corrupti necessitatibus, deleniti aliquid, recusandae officia perspiciatis ipsum nemo enim.
     </p>
-    <a href="/involved.html">Read More</a>
-  </section>
+    <a class="btn-link btn-link-purple" href="/involved.html">Read More</a>
+  </article>
 </main>
-<footer>
+<footer class="main-footer">
   <h2>We hope to see you</h2>
   <section>
     <a href="/">One</a>

@@ -24,4 +24,5 @@
 :root {
   font-size: 10px;
   font-family: 'Roboto', Arial, sans-serif;
+  color: var(--sec-1-25)
 }

@@ -18,14 +18,21 @@
   </div>
   <a class="skip-main" href="#maincontent">Skip to main content</a>
 </header>
-<nav>
-  <a href="./">Home</a>
-  <a href="./explore.html">Explore</a>
-  <a href="./exhibitions.html">Exhibitions</a>
-  <a href="./about.html">About Us</a>
-  <a href="./involved.html">Get Involved</a>
+<nav class="main-navigation" role="navigation">
+  <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
+    <!-- <span class="close-icon">×</span> -->
+    <span class="main-navigation__burger-icon">☰</span>
+    Menu
+  </button>
+  <ul class="main-navigation__list pt-15" id="menu">
+    <li class="main-navigation__item"><a href="./">Home</a></li>
+    <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
+    <li class="main-navigation__item"><a href="./exhibitions.html">Exhibitions</a></li>
+    <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
+    <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
+  </ul>
 </nav>
-<section class="hero clearfix wrapper">
+<section class="hero clearfix wrapper p-10">
   <img src="./img/images/fasade_outside.jpg" alt="the colorfull outside of the museum">
   <div>
     <blockquote>Science should not be confined to the <span>textbook</span>...</blockquote>
@@ -127,7 +134,7 @@
       <p class="subheading">We offer a wide variety of exhibitions</p>
     </header>
     <section class="exhibitions__single mt-10">
-      <figure></figure>
+      <img src="./img/images/moon_phases.jpg" alt="the moon and its phases">
       <div class="exhibitions__text">
         <h3>Cosmology</h3>
         <p>
@@ -137,7 +144,7 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <figure></figure>
+      <img src="./img/images/great_sea_beast_skeleton.jpg" alt="skeleton of giant sea dinosaur">
       <div class="exhibitions__text">
         <h3>Evolution</h3>
         <p>
@@ -147,7 +154,7 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <figure></figure>
+      <img src="./img/images/biology_torso.jpg" alt="human torso model with view of insides">
       <div class="exhibitions__text">
         <h3>Biology and Medicine</h3>
         <p>
@@ -157,7 +164,7 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <figure></figure>
+      <img src="./img/images/exhibition_technology.jpg" alt="">
       <div class="exhibitions__text">
         <h3>Robotics and AI</h3>
         <p>
@@ -167,7 +174,7 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <figure></figure>
+      <img src="./img/images/giant_ants.jpg" alt="">
       <div class="exhibitions__text">
         <h3>Ecology</h3>
         <p>
@@ -229,7 +236,20 @@
     </div>
   </section>
 </footer>
-  
+  <script>
+  var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.main-navigation__list');
+
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  </script>
 </body>
 
 </html>

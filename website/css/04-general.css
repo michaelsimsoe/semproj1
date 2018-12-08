@@ -1,6 +1,8 @@
 /* 04 General styles and variables 
  * 4.1 Colors - variables
  * 4.2 Utilities
+ ** 4.2.2 Margin & Padding helpers
+ ** 4.2.3 Screen size helpers
  * 4.3 General styling - bacic elements
  * 4.4 General styling - classes
  * 4.5 Skip to main content
@@ -64,6 +66,10 @@
 }
 
 /* 4.2.2 Margin & Padding helpers */
+.mt-5 {
+  margin-top: .5rem;
+}
+
 .mt-10 {
   margin-top: 1rem;
 }
@@ -76,9 +82,16 @@
   margin-bottom: .5rem;
 }
 
+.mb-10 {
+  margin-bottom: 1rem;
+}
+.mb-15 {
+  margin-bottom: 1.5rem;
+}
 .m-5 {
   margin: .5rem;
 }
+
 
 .p-5 {
   padding: .5rem;
@@ -92,6 +105,10 @@
   padding-top: 1.5rem;
 }
 
+/* 4.2.3 Screen size helpers */
+.hide-small {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   .wrapper {
@@ -124,6 +141,7 @@ html {
 html, body {
   background-color: var(--background-color);
   font-size: 1.8rem;
+  line-height: 1.5;
 }
 
 h1, h2, h3 {
@@ -215,6 +233,10 @@ a:visited {
   background-color: var(--prim-1-25);
 }
 
+.article-divider {
+  
+}
+
 
 /* 
  * 4.5 Skip to main content for screen reader and keyboard-only users
@@ -241,7 +263,7 @@ a.skip-main:focus, a.skip-main:active {
     margin: 10px 35%;
     padding:5px;
     border-radius: 15px;
-    border:4px solid yellow;
+    border:4px solid var(--prim-2-55);
     text-align:center;
     font-size:1.2em;
     z-index:999;

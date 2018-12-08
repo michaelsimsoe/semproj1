@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    document.getElementsByTagName('html')[0].classList.add('js');
+  </script>
 </head>
 
 <body>
@@ -21,8 +24,10 @@
 <nav class="main-navigation" role="navigation">
   <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
     <!-- <span class="close-icon">×</span> -->
-    <span class="main-navigation__burger-icon">☰</span>
-    Menu
+    <span class="main-navigation__burger-icon">&#x2630;</span>
+    <span class="main-navigation__text">
+      Menu
+    </span>  
   </button>
   <ul class="main-navigation__list pt-15" id="menu">
     <li class="main-navigation__item"><a href="./">Home</a></li>
@@ -33,10 +38,10 @@
   </ul>
 </nav>
 <section class="hero clearfix wrapper p-10">
-  <img src="./img/images/fasade_outside.jpg" alt="the colorfull outside of the museum">
+  <img src="./img/fasade_outside-300x300.jpg" alt="the colorfull outside of the museum">
   <div>
-    <blockquote>Science should not be confined to the <span>textbook</span>...</blockquote>
-    <blockquote>but brought to live through <span>exhibitions!</span></blockquote>
+    <blockquote><em>Science should not be confined to the <span>textbook</span>...</em></blockquote>
+    <blockquote><strong>but brought to live through <span>exhibitions!</span></strong></blockquote>
   </div>
 </section>
 <main class="wrapper mt-10" id="maincontent">
@@ -75,142 +80,144 @@
         where we’re committed to making science accessible to all.
       </p>
     </header>
+    <figure>
+      <img src="./img/girl_function-340.jpg" alt="girl looking at mathematical functions">
+      <figcaption class="m-5">Explore the wonders of science together with us.</figcaption>
+    </figure>
     <p>
-      Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to
-      exploring everything from galaxies far away to the very building blocks of life itself.
+      Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
     </p>
     <p>
-      The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps
-      even ignite a lifelong passion to continue the exploration of the world around us.
+      The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
     </p>
     <p>
       We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have
-      over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for
-      you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to
-      life at night when everyone’s gone home).
+      over <strong>1000 different exhibits</strong> on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life <em>(apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</em>
     </p>
   </article>
-  <article class="news mt-15">
-    <header class="mb-5">
+  <hr class="article-divider mt-10 mb-10">
+  <article class="news">
+    <header class="p-10">
       <h2>News</h2>
       <p class="subheading">
         Whats happening at the museum?
       </p>
     </header>
-    <section class="news__item mt-10">
-      <img src="./img/images/mammoth.jpg" alt="great museum hall with mammoth on platau">
+    <section class="news__item">
+      <img class="p-10" src="./img/mammoth-340x340.jpg" alt="great museum hall with mammoth on platau">
       <div class="news__text m-5">
         <h3>Night at the museum</h3>
         <p>
           Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays.
         </p>
-        <a class="btn-link btn-link-purple" href="/exhibitions.html#night">Read More</a>
+        <a class="btn-link btn-link-purple" href="./exhibitions.html#night">Read More</a>
       </div>
     </section>
     <section class="news__item mt-10">
-      <img src="./img/images/pilot.jpg" alt="pilot inside cockpit">
+      <img class="p-10" src="./img/pilot-340x340.jpg" alt="pilot inside cockpit">
       <div class="news__text m-5">
         <h3>Visiting Professor of Aeronautics</h3>
         <p>
           Prof Sheila Widnall from the Massachusetts Institute of Technology is visiting us to talk about the future of space.
         </p>
-        <a class="btn-link btn-link-purple" href="/exhibitions.html#mit">Read More</a>
+        <a class="btn-link btn-link-purple" href="./exhibitions.html#mit">Read More</a>
       </div>
     </section>
     <section class="news__item mt-10">
-      <img src="./img/images/ball_pendulum.jpg" alt="a ball bendelum with oragne balls">
+      <img class="p-10" src="./img/ball_pendulum-340x340.jpg" alt="a ball bendelum with oragne balls">
       <div class="news__text m-5">
         <h3>Energetica Exhibition on Loan</h3>
         <p>
           Experience the power of the elements as we harness them.
         </p>
-        <a class="btn-link btn-link-purple" href="/exhibitions.html#power">Read More</a>
+        <a class="btn-link btn-link-purple" href="./exhibitions.html#power">Read More</a>
       </div>
     </section>
   </article>
+  <hr class="article-divider mt-10 mb-10">
   <article class="exhibitions mt-15">
     <header>
       <h2>Exhibitions</h2>
       <p class="subheading">We offer a wide variety of exhibitions</p>
     </header>
-    <section class="exhibitions__single mt-10">
-      <img src="./img/images/moon_phases.jpg" alt="the moon and its phases">
+    <section class="exhibitions__single">
+      <img src="./img/moon_phases-140x200.jpg" alt="the moon and its phases">
       <div class="exhibitions__text">
         <h3>Cosmology</h3>
         <p>
           Explore the wonders of our cosmos.Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us.
         </p>
-        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/images/great_sea_beast_skeleton.jpg" alt="skeleton of giant sea dinosaur">
+      <img src="./img/great_sea_beast_skeleton-140x200.jpg" alt="skeleton of giant sea dinosaur">
       <div class="exhibitions__text">
         <h3>Evolution</h3>
         <p>
           For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here?
         </p>
-        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/images/biology_torso.jpg" alt="human torso model with view of insides">
+      <img src="./img/biology_torso-140x200.jpg" alt="human torso model with view of insides">
       <div class="exhibitions__text">
         <h3>Biology and Medicine</h3>
         <p>
           From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world.
         </p>
-        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/images/exhibition_technology.jpg" alt="">
+      <img src="./img/exhibition_technology-140x200.jpg" alt="">
       <div class="exhibitions__text">
         <h3>Robotics and AI</h3>
         <p>
           The information revolution is here and robotics and artificial intelligence are the science of the future.
         </p>
-        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/images/giant_ants.jpg" alt="">
+      <img src="./img/giant_ants-140x200.jpg" alt="">
       <div class="exhibitions__text">
         <h3>Ecology</h3>
         <p>
           As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
         </p>
-        <a class="btn-link btn-link-blue" href="/exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
       </div>
     </section>
   </article>
-  <article>
-    <h2>Get Involved</h2>
+  <hr class="article-divider mt-10 mb-10">
+  <article class="cta-involved mb-15">
+    <h2 class="mb-5">Get Involved</h2>
     <p>
       There are various ways you can support the museum. Donations are very welcome and are an important way we keep this
       museum open and accessible to the whole community.
     </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt similique aliquam blanditiis possimus magni saepe laudantium numquam consectetur commodi corrupti necessitatibus, deleniti aliquid, recusandae officia perspiciatis ipsum nemo enim.
-    </p>
-    <a class="btn-link btn-link-purple" href="/involved.html">Read More</a>
+    <a class="btn-link btn-link-purple" href="./involved.html">Read More</a>
   </article>
 </main>
 <footer class="main-footer">
-  <h2>We hope to see you</h2>
-  <section>
-    <a href="/">One</a>
-    <a href="/">Two</a>
-    <a href="/">Three</a>
-    <a href="/">Four</a>
-    <a href="/">Five</a>
-    <a href="/">Six</a>
-    <!-- social -->
-    <img src="img/svg/facebook.svg" alt="facebook logo">
-    <img src="img/svg/twitter.svg" alt="twitter logo">
-    <img src="img/svg/location.svg" alt="location icon with pizza inside">
+  <section class="main-footer__mobile wrapper p-10">
+    <h2>We hope to see you</h2>
+    <div class="main-footer__social-mobile">
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon with pizza inside">
+    </div>
+    <div class="main-footer__links-mobile mb-15">
+      <a href="/">Birthday?</a>
+      <a href="/">Contact</a>
+      <a href="/">Work</a>
+      <a href="/">Opening hours</a>
+      <a href="/">Learn</a>
+    </div>
   </section>
-  <section>
+  <section class="hide-small">
     <div>
       <h3>What else do we offer?</h3>
       <ul>
@@ -224,11 +231,11 @@
     <div>
       <h2>Work, research or study</h2>
       <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-        <li>Four</li>
-        <li>Five</li>
+        <li>Contact us</li>
+        <li>Birthay?</li>
+        <li>Work</li>
+        <li>Opening hours</li>
+        <li>Learn</li>
       </ul>
     </div>
     <div>

@@ -6,3 +6,29 @@
   background-color: var(--prim-1-55);
   color: var(--prim-2-55)
 }
+
+.main-footer__mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer__mobile h2 {
+  margin: 0 auto;
+}
+
+.main-footer__social-mobile {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-footer__social-mobile img {
+  flex-grow: 1;
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.main-footer__links-mobile {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+}

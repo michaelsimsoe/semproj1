@@ -10,6 +10,8 @@
   background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
   border: var(--sec-1-25) solid 2px;
   box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+  display: flex;
+  flex-direction: column;
 }
 .exhibitions-intro {
   height: 50vh;
@@ -41,4 +43,9 @@
 .special-events img, .exhibitions img {
   width: 100%;
   height: auto;
+}
+
+.special-events section, .exhibitions section {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
 }

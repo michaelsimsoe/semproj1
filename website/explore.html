@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="museum, community science museum, dinosaurs, ecology, biology, cosmology, aeronautics, pysics, evolution, robotics, ai, kids, techers, research">
   <meta name="author" content="Michael Krøyserth-Simsø">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#39abe0">
-  <title>Community Science Museum</title>
+  <title>Community Science Museum - Explore our museum</title>
   <link rel="stylesheet" href="css/main.css">
   <script>
     document.getElementsByTagName('html')[0].classList.add('js');
@@ -39,35 +39,36 @@
       <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
     </ul>
   </nav>
-  <div class="background"></div>
+  <div class="explore-intro">
+    <div class="wrapper pt-15">
+      <div class="explore-intro__heading p-10">
+        <h2>Explore</h2>
+        <p class="subheading">We've got something for everyon</p>
+      </div>
+    </div>
+  </div>
   <!-- CONTENT -->
   <main class="wrapper">
-    <header class="mt-10">
-      <h2>Explore</h2>
-      <p class=".subheading">
-        We've got something for everyone
-      </p>
-    </header>
-    <section class="kids mt-5" id="kids-learn">
+    <section class="kids mt-15 p-10 mb-15" id="kids-learn">
       <header>
         <h3>For kids</h3>
         <p class="subheading">You are our number one!</p>
       </header>
-      <figure>
-        <img src="./img/readingboy-340x300.jpg" alt="boy reading a book">
-      </figure>
       <p>
         Are you a young person <strong>looking to learn</strong> more about science? Come on down to our museum, there’s plenty to see and do. You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our resident Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you come ready to learn and explore!
       </p>
-     <aside class="young_stars p-5">
-        We have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll get to
-        explore and experiment with our team of experts.
-      </aside>
+      <figure>
+        <img src="./img/vr_girl-340.jpg" alt="young girl with vr googles">
+      </figure>
       <p>
         <em>During the school holidays</em> we run special holiday clubs where you can join other children your age to go on a journey of discovery. Each holiday we pick a new theme to explore. To find out more about the holiday club and how you can join, <a href="./contact.html">send us a message</a>.
       </p>
     </section>
-    <section class="teachers mt-10">
+    <aside class="young_stars p-5">
+      We have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll get to
+      explore and experiment with our team of experts.
+    </aside>
+    <section class="teachers mt-15 p-10 mb-15">
       <header>
         <h3>For teachers</h3>
         <p class="subheading">Let us help enrich the learning experience</p>
@@ -85,7 +86,7 @@
         through for a visit.
       </p>
     </section>
-    <section id="reseachers" class="reseachers">
+    <section id="reseachers" class="reseachers mt-15 p-10 mb-15">
       <header>
         <h3>Researchers</h3>
         <p class="subheading">Help us discover</p>
@@ -104,53 +105,56 @@
       <div class="main-footer__social-mobile">
         <img src="img/svg/facebook.svg" alt="facebook logo">
         <img src="img/svg/twitter.svg" alt="twitter logo">
-        <img src="img/svg/location.svg" alt="location icon with pizza inside">
+        <img src="img/svg/location.svg" alt="location icon">
       </div>
       <div class="main-footer__links-mobile mb-15">
-        <a href="/">Birthday?</a>
-        <a href="/">Contact</a>
-        <a href="/">Work</a>
-        <a href="/">Opening hours</a>
-        <a href="/">Learn</a>
+        <a href="./contact.html">Birthday?</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./explore.html#reseachers">Work</a>
+        <a href="./about.html#opening-hours">Opening hours</a>
+        <a href="./explre.html#kids-learn">Learn</a>
       </div>
     </section>
     <section class="hide-small">
       <div>
         <h3>What else do we offer?</h3>
         <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
+          <li><a href="./contact.html">Spend your birthday with us?</a></li>
+  
+          <li><a href="./about.html#vision">Read about our vision</a></li>
         </ul>
       </div>
       <div>
         <h2>Work, research or study</h2>
         <ul>
-          <li>Contact us</li>
-          <li>Birthay?</li>
-          <li>Work</li>
-          <li>Opening hours</li>
-          <li>Learn</li>
+          <li><a href="./contact.html">Contact us</a></li>
+          <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
+          <li><a href="./about.html#opening-hours">When are we open?</a></li>
+          <li><a href="./explre.html#kids-learn">Learn with us</a></li>
         </ul>
       </div>
       <div>
-        <h2>Get in touch</h2>
+        <h2>Get in touch thorugh social media</h2>
+        <img src="img/svg/facebook.svg" alt="facebook logo">
+        <img src="img/svg/twitter.svg" alt="twitter logo">
+        <img src="img/svg/location.svg" alt="location icon">
       </div>
     </section>
   </footer>
   <script>
     var toggle = document.querySelector('#toggle');
     var menu = document.querySelector('.main-navigation__list');
+    var hamburgerIcon = document.querySelector('.main-navigation__burger-icon');
 
     toggle.addEventListener('click', function () {
       if (menu.classList.contains('is-active')) {
         this.setAttribute('aria-expanded', 'false');
         menu.classList.remove('is-active');
+        hamburgerIcon.innerText = '\u2630';
       } else {
         menu.classList.add('is-active');
         this.setAttribute('aria-expanded', 'true');
+        hamburgerIcon.innerText = '\u00D7';
       }
     });
   </script>

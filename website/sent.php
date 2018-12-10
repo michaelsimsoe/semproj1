@@ -1,9 +1,11 @@
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#39abe0" />
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
@@ -36,7 +38,7 @@
       <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
     </ul>
   </nav>
-  <div class="background"></div>
+  <!-- <div class="background"></div> -->
   <main class="wrapper">
     <section class="contact-sent">
       <h2>Message Sent!</h2>
@@ -45,59 +47,63 @@
     </section>
   </main>
     <footer class="main-footer">
-      <section class="main-footer__mobile wrapper p-10">
-        <h2>We hope to see you</h2>
-        <div class="main-footer__social-mobile">
-          <img src="img/svg/facebook.svg" alt="facebook logo">
-          <img src="img/svg/twitter.svg" alt="twitter logo">
-          <img src="img/svg/location.svg" alt="location icon">
-        </div>
-        <div class="main-footer__links-mobile mb-15">
-          <a href="./contact.html">Birthday?</a>
-          <a href="/">Contact</a>
-          <a href="/">Work</a>
-          <a href="/">Opening hours</a>
-          <a href="/">Learn</a>
-        </div>
-      </section>
-      <section class="hide-small">
-        <div>
-          <h3>What else do we offer?</h3>
-          <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-            <li>Five</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Work, research or study</h2>
-          <ul>
-            <li>Contact us</li>
-            <li>Birthay?</li>
-            <li>Work</li>
-            <li>Opening hours</li>
-            <li>Learn</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Get in touch</h2>
-        </div>
-      </section>
-    </footer>
-    <script>
-      var toggle = document.querySelector('#toggle');
-      var menu = document.querySelector('.main-navigation__list');
+  <section class="main-footer__mobile wrapper p-10">
+    <h2>We hope to see you</h2>
+    <div class="main-footer__social-mobile">
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon">
+    </div>
+    <div class="main-footer__links-mobile mb-15">
+      <a href="./contact.html">Birthday?</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./explore.html#reseachers">Work</a>
+      <a href="./about.html#opening-hours">Opening hours</a>
+      <a href="./explre.html#kids-learn">Learn</a>
+    </div>
+  </section>
+  <section class="hide-small">
+    <div>
+      <h3>What else do we offer?</h3>
+      <ul>
+        <li><a href="./contact.html">Spend your birthday with us?</a></li>
+        
+        <li><a href="./about.html#vision">Read about our vision</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Work, research or study</h2>
+      <ul>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
+        <li><a href="./about.html#opening-hours">When are we open?</a></li>
+        <li><a href="./explre.html#kids-learn">Learn with us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Get in touch thorugh social media</h2>
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon">
+    </div>
+  </section>
+</footer>
+  <script>
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.main-navigation__list');
+    var hamburgerIcon = document.querySelector('.main-navigation__burger-icon');
 
-      toggle.addEventListener('click', function () {
-        if (menu.classList.contains('is-active')) {
-          this.setAttribute('aria-expanded', 'false');
-          menu.classList.remove('is-active');
-        } else {
-          menu.classList.add('is-active');
-          this.setAttribute('aria-expanded', 'true');
-        }
-      });
-    </script>
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+        hamburgerIcon.innerText = '\u2630';
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+        hamburgerIcon.innerText = '\u00D7';
+      }
+    });
+  </script>
   </body>
+  </html>

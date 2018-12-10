@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="museum, community science museum, dinosaurs, ecology, biology, cosmology, aeronautics, pysics, evolution, robotics, ai, kids, techers, research">
   <meta name="author" content="Michael Krøyserth-Simsø">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#39abe0">
-  <title>Community Science Museum</title>
+  <title>Community Science Museum - About Us</title>
   <link rel="stylesheet" href="css/main.css">
   <script>
     document.getElementsByTagName('html')[0].classList.add('js');
@@ -38,7 +38,6 @@
       <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
     </ul>
   </nav>
-  <div class="background"></div>
   <!-- CONTENT -->
   <div class="about-intro">
     <div class="wrapper pt-15">
@@ -56,7 +55,7 @@
     <a href="#accessibility">Do we have any food?</a>
   </section>
   <main class="wrapper">
-    <section class="about-vision mt-15" id="vision">
+    <section class="about-vision mt-15 p-10 mb-15" id="vision">
       <h2>We love science!</h2>
       <p>
         Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth
@@ -78,12 +77,11 @@
       </p>
     </section>
     <hr>
-    <section class="mt-15" id="location">
+    <section class="about-location mt-15 p-10 mb-15" id="location">
       <h3>Location</h3>
-      <div style="width: 100%">
-        <iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=Sommerfeldts%20gate%2074%2C%209009%20Troms%C3%B8+(Community%20Science%20Museum)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-          </iframe>
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=Sommerfeldts%20gate%2074%2F76%2C%209009%20Troms%C3%B8&key=AIzaSyAeM9yLnOq7uXPp95pphyt_JzSjQQRI8DI"
+          allowfullscreen></iframe>
       </div>
       <br />
       <p>
@@ -91,7 +89,7 @@
       </p>
       <p><em>On top of the Tromsø City Island. Eet your lunch while you enjoy the view of the Tromsdalspeak and the Ishavs Cathedral.</em></p>
     </section>
-    <section class="mt-15 mb-15" id="opening-hours">
+    <section class="about-hours mt-15 p-10 mb-15" id="opening-hours">
       <table>
         <caption>
           <h3>Opening Hours</h3>
@@ -125,11 +123,11 @@
           </tr>
           <tr>
             <td>Saturday</td>
-            <td>9:00 – 16:00</td>
+            <td>09:00 – 16:00</td>
           </tr>
           <tr>
             <td>Sunday</td>
-            <td>9:00 – 13:00</td>
+            <td>09:00 – 13:00</td>
           </tr>
         </tbody>
       </table>
@@ -146,7 +144,7 @@
       </p>
     </section>
     <hr>
-    <section class="about-accessibility mt-15" id="accessibility">
+    <section class="about-accessibility mt-15 p-10 mb-15" id="accessibility">
       <h3>Food and drink</h3>
       <p>
         There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.
@@ -163,59 +161,62 @@
       </p>
     </section>
   </main>
-  <footer class="main-footer">
-    <section class="main-footer__mobile wrapper p-10">
-      <h2>We hope to see you</h2>
-      <div class="main-footer__social-mobile">
-        <img src="img/svg/facebook.svg" alt="facebook logo">
-        <img src="img/svg/twitter.svg" alt="twitter logo">
-        <img src="img/svg/location.svg" alt="location icon with pizza inside">
-      </div>
-      <div class="main-footer__links-mobile mb-15">
-        <a href="/">Birthday?</a>
-        <a href="/">Contact</a>
-        <a href="/">Work</a>
-        <a href="/">Opening hours</a>
-        <a href="/">Learn</a>
-      </div>
-    </section>
-    <section class="hide-small">
-      <div>
-        <h3>What else do we offer?</h3>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Work, research or study</h2>
-        <ul>
-          <li>Contact us</li>
-          <li>Birthay?</li>
-          <li>Work</li>
-          <li>Opening hours</li>
-          <li>Learn</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Get in touch</h2>
-      </div>
-    </section>
-  </footer>
+<footer class="main-footer">
+  <section class="main-footer__mobile wrapper p-10">
+    <h2>We hope to see you</h2>
+    <div class="main-footer__social-mobile">
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon">
+    </div>
+    <div class="main-footer__links-mobile mb-15">
+      <a href="./contact.html">Birthday?</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./explore.html#reseachers">Work</a>
+      <a href="./about.html#opening-hours">Opening hours</a>
+      <a href="./explre.html#kids-learn">Learn</a>
+    </div>
+  </section>
+  <section class="hide-small">
+    <div>
+      <h3>What else do we offer?</h3>
+      <ul>
+        <li><a href="./contact.html">Spend your birthday with us?</a></li>
+
+        <li><a href="./about.html#vision">Read about our vision</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Work, research or study</h2>
+      <ul>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
+        <li><a href="./about.html#opening-hours">When are we open?</a></li>
+        <li><a href="./explre.html#kids-learn">Learn with us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Get in touch thorugh social media</h2>
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon">
+    </div>
+  </section>
+</footer>
   <script>
     var toggle = document.querySelector('#toggle');
     var menu = document.querySelector('.main-navigation__list');
+    var hamburgerIcon = document.querySelector('.main-navigation__burger-icon');
 
     toggle.addEventListener('click', function () {
       if (menu.classList.contains('is-active')) {
         this.setAttribute('aria-expanded', 'false');
         menu.classList.remove('is-active');
+        hamburgerIcon.innerText = '\u2630';
       } else {
         menu.classList.add('is-active');
         this.setAttribute('aria-expanded', 'true');
+        hamburgerIcon.innerText = '\u00D7';
       }
     });
   </script>

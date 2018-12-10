@@ -133,6 +133,7 @@
 */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -142,6 +143,14 @@ html, body {
   background-color: var(--background-color);
   font-size: 1.8rem;
   line-height: 1.5;
+}
+
+body {
+  background-image: url('../img/cranium-2099084_640-4.png');
+  background-position: 0vw 30vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 p {

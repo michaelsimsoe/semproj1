@@ -7,15 +7,20 @@
 */
 
 /* 6.1 Intro Section */
-.hero img {
-  max-width: 50%;
+.index-intro {
+  height: 50vh;
+  background-image: url('../img/fasade_outside-400.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-intro div {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
   float: right;
+  width: 50%;
 }
-
-.hero blockquote {
-  margin: 2rem ;
-}
-
 .hero blockquote:first-of-type {
   margin-top: 0 ;
 }
@@ -31,6 +36,10 @@
 }
 
 /* 6.3 Introduction */
+.intro {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
 .intro p {
   margin-top: .5rem;
 }
@@ -98,6 +107,15 @@
 
 .exhibitions__text .btn-link {
   margin: auto auto .5rem;
+}
+
+@media only screen and (min-width: 440px) {
+  .exhibitions__single img {
+    max-width: 40%;
+  }
+  .exhibitions__text {
+    width: 60%;
+  }
 }
 
 .cta-involved .btn-link{

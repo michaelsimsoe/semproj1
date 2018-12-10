@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#39abe0">
+  <meta name="theme-color" content="#39abe0" />
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="/manifest.json">
   <script>
     document.getElementsByTagName('html')[0].classList.add('js');
   </script>
@@ -35,57 +35,49 @@
       <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
       <li class="main-navigation__item"><a href="./exhibitions.html">Exhibitions</a></li>
       <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
-      <li class="main-navigation__item current"><a href="./involved.html">Get Involved</a></li>
+      <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
     </ul>
   </nav>
   <div class="background"></div>
   <!-- CONTENT -->
-  <div class="involved-intro">
+  <div class="contact-intro">
     <div class="wrapper pt-15">
-      <div class="involved-intro__heading p-10">
-        <h2>Get Involved</h2>
-        <p class="subheading">Get to know the museum!</p>
+      <div class="contact-intro__heading p-10">
+        <h2>Contact us</h2>
+        <p class="subheading">With wathever is on your hearth!</p>
       </div>
     </div>
   </div>
-  <main class="wrapper">
-    <section class="involved-support mt-15 p-10 mb-15">
-      <h3>Support</h3>
-      <p>
-        There are various ways you can support the museum. Donations are very welcome and are an important way we keep this
-        museum open and accessible to the whole community.
-      </p>
-      <p>
-        You can also support us by donating items of interest to the museum’s collections. If you have some item or collection
-        that you think others would enjoy, please let us know by contacting our Collections Department and they will be able to
-        assist you.
-      </p>
-    </section>
-    <hr>
-    <section class="involved-volunteer mt-15 p-10 mb-15">
-      <h3>Volunteer</h3>
-      <p>
-        A number of people volunteer their time and effort to keep the displays in good order and ready for visitors to come
-        and enjoy. Volunteering has its perks including getting to see behind the scenes of a working museum, access to
-        staff-only lectures, and a monthly lunch where all staff and volunteers come together to discuss ideas for future
-        exhibits and strategies for the museum.
-      </p>
-      <p>
-        You can help volunteer in a number of different spheres. Please contact us if you’d like to find out more about how you
-        can get involved.
-      </p>
-    </section>
-    <hr>
-    <section class="involved-internships mt-15 p-10 mb-15">
-      <h3>Internships</h3>
-      <p>
-        Are you interested in working in a museum? Do you enjoy the fun and excitement of sharing the wonders of nature with
-        people? Well you could be just the right person to enjoy an internship at the museum.
-      </p>
-      <p>
-        You’ll be learning from a number of different academics and people who are passionate about science and sharing it with
-        the wider community.
-      </p>
+  <main class="wrapper mt-15 mb-15">
+    <section class="contact-form p-10">
+      <h2>What is on your mind?</h2>
+      <form action="./sent.php" method="POST">
+        <fieldset>
+          <legend>Who are you?</legend>
+          <label class="mt-5" for="name">Your name:</label>
+          <input type="text" id="name" name="name">
+          <label class="mt-5" for="email">Your email:</label>
+          <input type="email" id="email" name="email" required>
+        </fieldset>
+        <fieldset>
+          <legend>Your message</legend>
+          <label class="mt-5" for="category">Categroy</label>
+          <select name="category" id="category" class="">
+            <optgroup label="Happening">
+              <option value="birthday">Birthday</option>
+              <option value="personal-tour">Personal tour</option>
+            </optgroup>
+            <optgroup label="Administration">
+              <option value="involved">Get involved</option>
+              <option value="work">Work with us</option>
+              <option value="research">Research with us</option>
+            </optgroup>
+          </select>
+          <label for="message">What is on your mind?</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </fieldset>
+        <button type="submit" class="btn-link btn-link-purple">Send message</button>
+      </form>
     </section>
   </main>
   <footer class="main-footer">
@@ -94,10 +86,10 @@
       <div class="main-footer__social-mobile">
         <img src="img/svg/facebook.svg" alt="facebook logo">
         <img src="img/svg/twitter.svg" alt="twitter logo">
-        <img src="img/svg/location.svg" alt="location icon with pizza inside">
+        <img src="img/svg/location.svg" alt="location icon">
       </div>
       <div class="main-footer__links-mobile mb-15">
-        <a href="/">Birthday?</a>
+        <a href="./contact.html">Birthday?</a>
         <a href="/">Contact</a>
         <a href="/">Work</a>
         <a href="/">Opening hours</a>
@@ -144,6 +136,5 @@
       }
     });
   </script>
-  </body>
-  
-  </html>
+</body>
+</html>

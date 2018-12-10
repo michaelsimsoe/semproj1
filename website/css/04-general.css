@@ -14,7 +14,7 @@
  * All colors are with darker and lighter accents
 */
 :root {
-  --background-color: #c9cdcd;
+  --background-color: hsla(180, 4%, 80%, .7);
   /* Primary color 1 - blue */
   --prim-1-95: hsl(199, 76%, 95%);
   --prim-1-85: hsl(199, 74%, 85%);
@@ -144,6 +144,10 @@ html, body {
   line-height: 1.5;
 }
 
+p {
+  margin: .7rem 0;
+}
+
 h1, h2, h3 {
   font-family: 'Roboto Slab', serif;
 }
@@ -176,6 +180,21 @@ a:visited {
   color: #782708;
 }
 
+/* The horisontal-rule rule for chromiumbased browsers 
+ * https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
+*/
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto; 
+    -moz-margin-start: auto;
+    -moz-margin-end: auto;
+    border-style: inset;
+    border-width: 1px
+}
+
 /* 4.4 General styling - classes 
  * Styling common to all pages of site
 */
@@ -184,6 +203,7 @@ a:visited {
   color: var(--sec-1-45);
   font-style: italic;
   font-weight: lighter;
+  margin: 0;
 }
 
 .btn-link {
@@ -201,12 +221,10 @@ a:visited {
   color: #fff;
 }
 
-.btn-link-purple {
-  background-color: var(--sec-1-55);
-}
 
 .btn-link-purple {
   background-color: var(--sec-1-55);
+  box-shadow: 1px 1px 1px 0px var(--sec-1-25);
 }
 
 .btn-link-purple:hover {
@@ -219,11 +237,9 @@ a:visited {
 
 .btn-link-blue {
   background-color: var(--prim-1-55);
+  box-shadow: 1px 1px 1px 0px var(--prim-1-25);
 }
 
-.btn-link-blue {
-  background-color: var(--prim-1-55);
-}
 
 .btn-link-blue:hover {
   background-color: var(--prim-1-45);
@@ -269,3 +285,18 @@ a.skip-main:focus, a.skip-main:active {
     z-index:999;
 }
 
+/* 
+ * 4.6 Background Image
+ */
+
+ .background {
+   position: fixed;
+   top:0;
+   height: 100vh;
+   width: 100vw;
+   background-image: url('../img/cranium-2099084_640.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   z-index: -1;
+ }

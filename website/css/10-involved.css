@@ -1,0 +1,26 @@
+/* 10 index.html - Front page 
+ * 10.1 Intro
+ * 10.2 Support Section
+ * 10.3 Volunteer Section
+ * 10.4 Internship Secition
+ * 10.5 Common
+*/
+
+.involved-intro {
+  height: 50vh;
+  background-image: url('../img/steel_web-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.involved-intro__heading {
+  background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
+  border-radius: 3px;
+}
+
+/* 10.5 Common */
+.involved-support, .involved-volunteer, .involved-internships {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}

@@ -1,132 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#39abe0">
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    document.getElementsByTagName('html')[0].classList.add('js');
+  </script>
 </head>
-
 <body>
-  <header>
-    <h1>Community Science Museum</h1>
-    <p>Exlore togetger</p>
+  <header class="main_header">
+    <div class="wrapper">
+      <h1>Community <br>Science Museum</h1>
+      <p class="main_header__subheading">Exlore together</p>
+    </div>
+    <a class="skip-main" href="#maincontent">Skip to main content</a>
   </header>
-  <nav>
-    <a href="./">Home</a>
-    <a href="./explore.html">Explore</a>
-    <a href="./exhibitions.html">Exhibitions</a>
-    <a href="./about.html">About Us</a>
-    <a href="./involved.html">Get Involved</a>
+  <nav class="main-navigation" role="navigation">
+    <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
+      <!-- <span class="close-icon">×</span> -->
+      <span class="main-navigation__burger-icon">&#x2630;</span>
+      <span class="main-navigation__text">
+        Menu
+      </span>
+    </button>
+    <ul class="main-navigation__list pt-15" id="menu">
+      <li class="main-navigation__item"><a href="./">Home</a></li>
+      <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
+      <li class="main-navigation__item current"><a href="./exhibitions.html">Exhibitions</a></li>
+      <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
+      <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
+    </ul>
   </nav>
+  <div class="background"></div>
   <!-- CONTENT -->
-  <main>
-    <article>
+  <div class="exhibitions-intro">
+    <div class="wrapper">
       <h2>Special Events and Exhibitions</h2>
-      <section>
-        <h3>Visiting Professor of Aeronautics</h3>
+      <p class="subheading">What is new and what is always?</p>
+    </div>
+  </div>
+  <section class="exhibition-list wrapper mt-10 p-10">
+    <h3>Jump to exhibition</h3>
+    <a href="#cosmology">Cosmology</a>
+    <a href="#evolution">Evolution</a>
+    <a href="#biology">Biology and Medicine</a>
+    <a href="#robotics">Robotics and AI</a>
+    <a href="#ecology">Ecology</a>
+  </section>
+  <main class="wrapper">
+    <article class="special-events mt-10">
+      <header>
+        <h2>The comming events</h2>
+      </header>
+      <section id="mit">
+        <header>
+          <h3>Visiting Professor of Aeronautics</h3>
+          <p class="subheading">Look up!</p>
+        </header>
+        <figure>
+          <img src="./img/pilot-340x340.jpg" alt="pilot inside cockpit">
+          <figcaption class="m-5">Prof. Sheila Widnall on her way</figcaption>
+        </figure>
         <p>
-          It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be
-          delivering 3 lectures on the development of aeronautics and where the future lies in this exciting ‘space’.
+          It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting ‘space’.
+        </p>
+        <p>Timing for lectures TBA</p>
+      </section>
+      <section id="night">
+        <header>
+          <h3>Night in the Museum</h3>
+          <p class="subheading">Are they really alive?</p>
+        </header>
+        <figure>
+          <img src="./img/mammoth-340x340.jpg" alt="great museum hall with mammoth on platau">
+          <figcaption class="m-5">If they really wake up the night might be eventfull.</figcaption>
+        </figure>
+        <p>
+          Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science.
         </p>
       </section>
-      <section>
-        <h3>Night in the Museum</h3>
+      <section id="power">
+        <header>
+          <h3>Energetica Exhibition on Loan</h3>
+          <p class="subheading">True power</p>
+        </header>
+        <figure>
+          <img src="./img/ball_pendulum-340x340.jpg" alt="a ball bendelum with oragne balls">
+          <figcaption class="m-5">Power and energy. Bring your phisics!</figcaption>
+        </figure>
         <p>
-          Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays.
-          Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science.
-        </p>
-      </section>
-      <section>
-        <h3>Energetica Exhibition on Loan</h3>
-        <p>
-          On loan from the NEMO Science Museum in Amsterdam, the Energetica exhibition is coming to the Community Science Museum.
-          It’s a series of installations that allow visitors to experience the power of the elements as we harness them. From
-          solar energy powering lighting, to ‘Wind Island’ that shows how turbines are able to use and control wind to create
-          power.
+          On loan from the NEMO Science Museum in Amsterdam, the Energetica exhibition is coming to the Community Science Museum. It’s a series of installations that allow visitors to experience the power of the elements as we harness them. From solar energy powering lighting, to ‘Wind Island’ that shows how turbines are able to use and control wind to create power.
         </p>
       </section>
     </article>
-    <article>
+    <hr>
+    <article class="exhibitions mt-15">
       <h2>Exhibition Spaces</h2>
-      <section>
-        <h3>Cosmology</h3>
+      <section id="cosmology">
+        <header>
+          <h3>Cosmology</h3>
+          <p class="exhibition__info">Open all days</p>
+        </header>
+        <figure>
+          <img src="./img/moon_phases-340.jpg" alt="the moon and its phases">
+          <figcaption class="m-5">The moon has many faces</figcaption>
+        </figure>
         <p>
-          Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can
-          see and know about the universe around us. We’ll locate the various constellations and galaxies that can be seen and
-          learn a bit about the early navigators who used the stars to travel by.
+          Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us. We’ll locate the various constellations and galaxies that can be seen and learn a bit about the early navigators who used the stars to travel by.
         </p>
         <p>
-          Follow the journey of our solar exploration: from early Arab traders, to Galileo’s telescope, to the latest exploration
-          of the planets in our solar system.
+          Follow the journey of our solar exploration: from early Arab traders, to Galileo’s telescope, to the latest exploration of the planets in our solar system.
         </p>
       </section>
-      <section>
-        <h3>Evolution</h3>
+      <section id="evolution">
+        <header>
+          <h3>Evolution</h3>
+          <p class="exhibition__info">Open all days</p>
+        </header>
+        <figure>
+          <img src="./img/great_sea_beast_skeleton-340.jpg" alt="skeleton of giant sea dinosaur">
+          <figcaption class="m-5">Before us the were the rulers</figcaption>
+        </figure>
         <p>
-          For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and
-          how did we get here? Since Darwin proposed his theory of evolution we have had a framework for exploring and
+          For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here? Since Darwin proposed his theory of evolution we have had a framework for exploring and
           understanding our place in this world.
         </p>
         <p>
-          Discover the origins of life on this planet and how the species we know today have evolved our time. You can also take
-          some time to meet a few of the creatures who didn’t survive, including our Woolly Mammoth, the Dodos, and a number of
-          dinosaurs too.
+          Discover the origins of life on this planet and how the species we know today have evolved our time. You can also take some time to meet a few of the creatures who didn’t survive, including our Woolly Mammoth, the Dodos, and a number of dinosaurs too.
         </p>
       </section>
-      <section>
-        <h3>Biology and Medicine</h3>
+      <section id="biology">
+        <header>
+          <h3>Biology and Medicine</h3>
+          <p class="exhibition__info">Open all days</p>
+        </header>
+        <figure>
+          <img src="./img/biology_heart-340.jpg" alt="model of a hearth">
+          <figcaption class="m-5">The hardest working muscle</figcaption>
+        </figure>
         <p>
-          From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great
-          wonders of the tiny world.
+          From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world.
         </p>
         <p>
-          For many people their life expectancy is much longer and their quality of life much improved, thanks to the growth of
-          our understanding of medicine. Over a series of exhibits we explore the history of medicine and take a look at some
-          major breakthroughs including the discovery of penicillin and the first heart transplant.
+          For many people their life expectancy is much longer and their quality of life much improved, thanks to the growth of our understanding of medicine. Over a series of exhibits we explore the history of medicine and take a look at some major breakthroughs including the discovery of penicillin and the first heart transplant.
         </p>
         <p>
-          Many of our great medicinal discoveries have come not only from the lab, but also from observing animals in the wild.
-          Often our fellow creatures have beat us to it.
-        </p>
-      </section>
-      <section>
-        <h3>Robotics and AI</h3>
-        <p>
-          The information revolution is here and robotics and artificial intelligence are the science of the future. From useful
-          home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand
-          of Rob the Robot.
+          Many of our great medicinal discoveries have come not only from the lab, but also from observing animals in the wild. Often our fellow creatures have beat us to it.
         </p>
       </section>
-      <section>
-        <h3>Ecology</h3>
+      <section id="robotics">
+        <header>
+          <h3>Robotics and AI</h3>
+          <p class="exhibition__info">Open all days</p>
+        </header>
+        <figure>
+          <img src="./img/exhibition_technology-340.jpg" alt="the tech exhibition">
+          <figcaption class="m-5">Our tech echibition is the most popular</figcaption>
+        </figure>
         <p>
-          As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists
-          explore how to create a sustainable future not just for humans but for the whole planet.
+          The information revolution is here and robotics and artificial intelligence are the science of the future. From useful home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand of Rob the Robot.
         </p>
-        I<p>
-          n our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of
-          species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.
+      </section>
+      <section id="ecology">
+        <header>
+          <h3>Ecology</h3>
+          <p class="exhibition__info">Open all days</p>
+        </header>
+        <figure>
+          <img src="./img/giant_ants-340.jpg" alt="two giant ants">
+          <figcaption class="m-5">Lets be glad they dont get this big</figcaption>
+        </figure>
+        <p>
+          As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
+        </p>
+        <p>
+          In our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.
         </p>
       </section>
     </article>
   </main>
-  <footer>
-    <h2>We hope to see you</h2>
-    <section>
-      <a href="/">One</a>
-      <a href="/">Two</a>
-      <a href="/">Three</a>
-      <a href="/">Four</a>
-      <a href="/">Five</a>
-      <a href="/">Six</a>
-      <!-- social -->
+  <footer class="main-footer">
+    <section class="main-footer__mobile wrapper p-10">
+      <h2>We hope to see you</h2>
+      <div class="main-footer__social-mobile">
+        <img src="img/svg/facebook.svg" alt="facebook logo">
+        <img src="img/svg/twitter.svg" alt="twitter logo">
+        <img src="img/svg/location.svg" alt="location icon with pizza inside">
+      </div>
+      <div class="main-footer__links-mobile mb-15">
+        <a href="/">Birthday?</a>
+        <a href="/">Contact</a>
+        <a href="/">Work</a>
+        <a href="/">Opening hours</a>
+        <a href="/">Learn</a>
+      </div>
     </section>
-    <section>
+    <section class="hide-small">
       <div>
         <h3>What else do we offer?</h3>
         <ul>
@@ -140,11 +215,11 @@
       <div>
         <h2>Work, research or study</h2>
         <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
+          <li>Contact us</li>
+          <li>Birthay?</li>
+          <li>Work</li>
+          <li>Opening hours</li>
+          <li>Learn</li>
         </ul>
       </div>
       <div>
@@ -152,7 +227,20 @@
       </div>
     </section>
   </footer>
+  <script>
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.main-navigation__list');
 
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  </script>
 </body>
 
 </html>

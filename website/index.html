@@ -6,13 +6,14 @@
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#39abe0">
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="/manifest.json">
   <script>
     document.getElementsByTagName('html')[0].classList.add('js');
   </script>
 </head>
-
 <body>
 <header class="main_header">
   <div class="wrapper">
@@ -30,13 +31,14 @@
     </span>  
   </button>
   <ul class="main-navigation__list pt-15" id="menu">
-    <li class="main-navigation__item"><a href="./">Home</a></li>
+    <li class="main-navigation__item current"><a href="./">Home</a></li>
     <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
     <li class="main-navigation__item"><a href="./exhibitions.html">Exhibitions</a></li>
     <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
     <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
   </ul>
 </nav>
+<div class="background"></div>
 <section class="hero clearfix wrapper p-10">
   <img src="./img/fasade_outside-300x300.jpg" alt="the colorfull outside of the museum">
   <div>
@@ -62,14 +64,11 @@
     <div class="entrance mt-10 p-10">
       <h3>Admission</h3>
       <p>
-        The entrance is free for all.
+        <strong>The entrance is free for all.</strong>
       </p>
       <p>
         There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy
         printed guide of the museum.
-      </p>
-      <p>
-        If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.
       </p>
     </div>
   </aside>
@@ -85,15 +84,9 @@
       <figcaption class="m-5">Explore the wonders of science together with us.</figcaption>
     </figure>
     <p>
-      Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
-    </p>
-    <p>
       The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
     </p>
-    <p>
-      We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have
-      over <strong>1000 different exhibits</strong> on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life <em>(apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</em>
-    </p>
+    <a class="btn-link btn-link-purple" href="./about.html">Read More</a>
   </article>
   <hr class="article-divider mt-10 mb-10">
   <article class="news">
@@ -147,7 +140,7 @@
         <p>
           Explore the wonders of our cosmos.Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us.
         </p>
-        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html#cosmology">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
@@ -157,7 +150,7 @@
         <p>
           For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here?
         </p>
-        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html#evolution">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
@@ -167,7 +160,7 @@
         <p>
           From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world.
         </p>
-        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html#biology">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
@@ -177,7 +170,7 @@
         <p>
           The information revolution is here and robotics and artificial intelligence are the science of the future.
         </p>
-        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html#robotics">Read More</a>
       </div>
     </section>
     <section class="exhibitions__single mt-10">
@@ -187,7 +180,7 @@
         <p>
           As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
         </p>
-        <a class="btn-link btn-link-blue" href="./exhibitions.html">Read More</a>
+        <a class="btn-link btn-link-blue" href="./exhibitions.html#ecology">Read More</a>
       </div>
     </section>
   </article>
@@ -207,39 +200,39 @@
     <div class="main-footer__social-mobile">
       <img src="img/svg/facebook.svg" alt="facebook logo">
       <img src="img/svg/twitter.svg" alt="twitter logo">
-      <img src="img/svg/location.svg" alt="location icon with pizza inside">
+      <img src="img/svg/location.svg" alt="location icon">
     </div>
     <div class="main-footer__links-mobile mb-15">
-      <a href="/">Birthday?</a>
-      <a href="/">Contact</a>
-      <a href="/">Work</a>
-      <a href="/">Opening hours</a>
-      <a href="/">Learn</a>
+      <a href="./contact.html">Birthday?</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./explore.html#reseachers">Work</a>
+      <a href="./about.html#opening-hours">Opening hours</a>
+      <a href="./explre.html#kids-learn">Learn</a>
     </div>
   </section>
   <section class="hide-small">
     <div>
       <h3>What else do we offer?</h3>
       <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-        <li>Four</li>
-        <li>Five</li>
+        <li><a href="./contact.html">Spend your birthday with us?</a></li>
+        
+        <li><a href="./about.html#vision">Read about our vision</a></li>
       </ul>
     </div>
     <div>
       <h2>Work, research or study</h2>
       <ul>
-        <li>Contact us</li>
-        <li>Birthay?</li>
-        <li>Work</li>
-        <li>Opening hours</li>
-        <li>Learn</li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
+        <li><a href="./about.html#opening-hours">When are we open?</a></li>
+        <li><a href="./explre.html#kids-learn">Learn with us</a></li>
       </ul>
     </div>
     <div>
-      <h2>Get in touch</h2>
+      <h2>Get in touch thorugh social media</h2>
+      <img src="img/svg/facebook.svg" alt="facebook logo">
+      <img src="img/svg/twitter.svg" alt="twitter logo">
+      <img src="img/svg/location.svg" alt="location icon">
     </div>
   </section>
 </footer>

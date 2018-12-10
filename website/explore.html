@@ -7,76 +7,114 @@
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#39abe0">
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    document.getElementsByTagName('html')[0].classList.add('js');
+  </script>
 </head>
 
 <body>
-  <header>
-    <h1>Community Science Museum</h1>
-    <p>Exlore togetger</p>
+  <header class="main_header">
+    <div class="wrapper">
+      <h1>Community <br>Science Museum</h1>
+      <p class="main_header__subheading">Exlore together</p>
+    </div>
+    <a class="skip-main" href="#maincontent">Skip to main content</a>
   </header>
-  <nav>
-    <a href="./">Home</a>
-    <a href="./explore.html">Explore</a>
-    <a href="./exhibitions.html">Exhibitions</a>
-    <a href="./about.html">About Us</a>
-    <a href="./involved.html">Get Involved</a>
+  <nav class="main-navigation" role="navigation">
+    <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
+      <!-- <span class="close-icon">×</span> -->
+      <span class="main-navigation__burger-icon">&#x2630;</span>
+      <span class="main-navigation__text">
+        Menu
+      </span>
+    </button>
+    <ul class="main-navigation__list pt-15" id="menu">
+      <li class="main-navigation__item"><a href="./">Home</a></li>
+      <li class="main-navigation__item current"><a href="./explore.html">Explore</a></li>
+      <li class="main-navigation__item"><a href="./exhibitions.html">Exhibitions</a></li>
+      <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
+      <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
+    </ul>
   </nav>
+  <div class="background"></div>
   <!-- CONTENT -->
-  <main>
-    <h2>Explore</h2>
-    <section>
-      <h3>For kids</h3>
-      <p>
-        Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.
-        You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our resident
-        Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you come ready to learn
-        and explore.
+  <main class="wrapper">
+    <header class="mt-10">
+      <h2>Explore</h2>
+      <p class=".subheading">
+        We've got something for everyone
       </p>
+    </header>
+    <section class="kids mt-5" id="kids-learn">
+      <header>
+        <h3>For kids</h3>
+        <p class="subheading">You are our number one!</p>
+      </header>
+      <figure>
+        <img src="./img/readingboy-340x300.jpg" alt="boy reading a book">
+      </figure>
       <p>
-        We also have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll get to
+        Are you a young person <strong>looking to learn</strong> more about science? Come on down to our museum, there’s plenty to see and do. You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our resident Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you come ready to learn and explore!
+      </p>
+     <aside class="young_stars p-5">
+        We have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll get to
         explore and experiment with our team of experts.
-      </p>
+      </aside>
       <p>
-        During the school holidays we run special holiday clubs where you can join other children your age to go on a journey
-        of discovery. Each holiday we pick a new theme to explore. To find out more about the holiday club and how you can
-        join, send us a message.
+        <em>During the school holidays</em> we run special holiday clubs where you can join other children your age to go on a journey of discovery. Each holiday we pick a new theme to explore. To find out more about the holiday club and how you can join, <a href="./contact.html">send us a message</a>.
       </p>
     </section>
-    <section>
-      <h3>For teachers</h3>
+    <section class="teachers mt-10">
+      <header>
+        <h3>For teachers</h3>
+        <p class="subheading">Let us help enrich the learning experience</p>
+      </header>
+      <figure>
+        <img src="./img/teacher_cartoon-340x300.jpg" alt="cartoon teacher in front of desk with chemestry set">
+      </figure>
       <p>
         As a community-driven museum, we want to work with schools to create places of learning and exploring. Our team are on
         hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video
         presentations that will excite and inspire them.
       </p>
       <p>
-        Please get in touch with us here to find out more about our facilities and to arrange a time to bring your students
+        Please <a href="./contact.html">get in touch with us</a> here to find out more about our facilities and to arrange a time to bring your students
         through for a visit.
       </p>
     </section>
-    <section>
-      <h3>Researchers</h3>
+    <section id="reseachers" class="reseachers">
+      <header>
+        <h3>Researchers</h3>
+        <p class="subheading">Help us discover</p>
+      </header>
+      <figure>
+        <img src="./img/microscope-340.jpg" alt="person looking through a microscope">
+      </figure>
       <p>
-        Are you looking to get involved with our team of researchers and academics? Our museum offers various ways for you to
-        use our resources and contribute towards them. We have online records, laboratory space, and a working relationship
-        with a number of universities around the country.
+        Are you looking to get involved with our team of researchers and academics? Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.
       </p>
     </section>
   </main>
-  <footer>
-    <h2>We hope to see you</h2>
-    <section>
-      <a href="/">One</a>
-      <a href="/">Two</a>
-      <a href="/">Three</a>
-      <a href="/">Four</a>
-      <a href="/">Five</a>
-      <a href="/">Six</a>
-      <!-- social -->
+  <footer class="main-footer">
+    <section class="main-footer__mobile wrapper p-10">
+      <h2>We hope to see you</h2>
+      <div class="main-footer__social-mobile">
+        <img src="img/svg/facebook.svg" alt="facebook logo">
+        <img src="img/svg/twitter.svg" alt="twitter logo">
+        <img src="img/svg/location.svg" alt="location icon with pizza inside">
+      </div>
+      <div class="main-footer__links-mobile mb-15">
+        <a href="/">Birthday?</a>
+        <a href="/">Contact</a>
+        <a href="/">Work</a>
+        <a href="/">Opening hours</a>
+        <a href="/">Learn</a>
+      </div>
     </section>
-    <section>
+    <section class="hide-small">
       <div>
         <h3>What else do we offer?</h3>
         <ul>
@@ -90,11 +128,11 @@
       <div>
         <h2>Work, research or study</h2>
         <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
+          <li>Contact us</li>
+          <li>Birthay?</li>
+          <li>Work</li>
+          <li>Opening hours</li>
+          <li>Learn</li>
         </ul>
       </div>
       <div>
@@ -102,7 +140,20 @@
       </div>
     </section>
   </footer>
+  <script>
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.main-navigation__list');
 
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  </script>
 </body>
 
 </html>

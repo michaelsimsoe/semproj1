@@ -2,6 +2,8 @@
  * 6.1 Hero Image
  * 6.2 Practical information
  * 6.3 Introduction
+ * 6.4 News
+ * 6.5 Exhibitions
 */
 
 /* 6.1 Intro Section */
@@ -14,9 +16,14 @@
   margin: 2rem ;
 }
 
+.hero blockquote:first-of-type {
+  margin-top: 0 ;
+}
+
 /* 6.2 Practical information */
 .info {
-  background-color: hsl(0, 0%, 100%, 0.4);
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
 }
 
 .hours, .entrance {
@@ -31,7 +38,18 @@
 .intro figure {
   background-color: hsl(0, 0%, 100%, 0.4);
   font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
 }
+
+.intro img {
+  width: 100%;
+  height: auto;
+}
+
+.intro .btn-link {
+  margin: auto auto .5rem;
+}
+
 
 /* 6.4 News */
 .news {
@@ -41,6 +59,7 @@
   background-color: hsl(0, 0%, 100%, 0.4);
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
 }
 
 .news__item p {
@@ -60,6 +79,7 @@
 /* 6.5 Exhibitions */
 .exhibitions__single {
   background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;

@@ -1,0 +1,44 @@
+/* 08 exlpore.html - Info to kids, teachers and researchers
+ * 8.1 Exhibitions intro
+ * 8.2 Special Events
+ * 8.3 Exhibitions
+ * 8.4 Common
+*/
+
+/* 8.1 Exhibitions intro */
+.exhibition-list {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  border: var(--sec-1-25) solid 2px;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+.exhibitions-intro {
+  height: 50vh;
+  background-image: url('../img/dome_ceiling-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 8.3 Exhibitions */
+
+.exhibitions h3 {
+  border-bottom: solid 1px var(--sec-1-25);
+  margin-bottom: .5rem;
+}
+
+.exhibition__info {
+  /* font-size: 1rem; // Why does this make it smaller?? */
+  font-size: .8em;
+}
+
+/* 8.4 Common */
+.special-events figure, .exhibitions figure {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.special-events img, .exhibitions img {
+  width: 100%;
+  height: auto;
+}

@@ -1,81 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Michael Krøyserth-Simsø">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#39abe0">
   <title>Community Science Museum</title>
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    document.getElementsByTagName('html')[0].classList.add('js');
+  </script>
 </head>
 
 <body>
-  <header>
-    <h1>Community Science Museum</h1>
-    <p>Exlore togetger</p>
+  <header class="main_header">
+    <div class="wrapper">
+      <h1>Community <br>Science Museum</h1>
+      <p class="main_header__subheading">Exlore together</p>
+    </div>
+    <a class="skip-main" href="#maincontent">Skip to main content</a>
   </header>
-  <nav>
-    <a href="./">Home</a>
-    <a href="./explore.html">Explore</a>
-    <a href="./exhibitions.html">Exhibitions</a>
-    <a href="./about.html">About Us</a>
-    <a href="./involved.html">Get Involved</a>
+  <nav class="main-navigation" role="navigation">
+    <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
+      <!-- <span class="close-icon">×</span> -->
+      <span class="main-navigation__burger-icon">&#x2630;</span>
+      <span class="main-navigation__text">
+        Menu
+      </span>
+    </button>
+    <ul class="main-navigation__list pt-15" id="menu">
+      <li class="main-navigation__item"><a href="./">Home</a></li>
+      <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
+      <li class="main-navigation__item"><a href="./exhibitions.html">Exhibitions</a></li>
+      <li class="main-navigation__item current"><a href="./about.html">About Us</a></li>
+      <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
+    </ul>
   </nav>
+  <div class="background"></div>
   <!-- CONTENT -->
-  <main>
-    <h2>Visit</h2>
-    <h3>Location</h3>
-    <p>
-      The museum is located at [student to include address].
-    </p>
-    <h3>Admission</h3>
-    <p>
-      The entrance is free for all.
-    </p>
-    <p>
-      There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy
-      printed guide of the museum.
-    </p>
-    <p>
-      If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.
-    </p>
-    <h3>Hours</h3>
-    Monday: Closed
-    Tuesday: 10:00 – 16:00
-    Wednesday: 10:00 – 16:00
-    Thursday: 10:00 – 16:00
-    Friday: 10:00 – 19:00
-    Saturday: 9:00 – 16:00
-    Sunday: 9:00 – 13:00
-    <h3>Accessibility</h3>
-    <p>
-      The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually
-      impaired.
-    </p>
-    <h3>Food and drink</h3>
-    <p>
-      There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.
-      Shop
-    </p>
-    <p>
-      Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to
-      continue to explore science even after you’ve left the museum.
-    </p>
-  </main>
-  <footer>
-    <h2>We hope to see you</h2>
-    <section>
-      <a href="/">One</a>
-      <a href="/">Two</a>
-      <a href="/">Three</a>
-      <a href="/">Four</a>
-      <a href="/">Five</a>
-      <a href="/">Six</a>
-      <!-- social -->
+  <div class="about-intro">
+    <div class="wrapper pt-15">
+      <div class="about-intro__heading p-10">
+        <h2>About us</h2>
+        <p class="subheading">Get to know the museum!</p>
+      </div>
+    </div>
+  </div>
+  <section class="about-list wrapper mt-10 p-10">
+    <h3>What are you looking for?</h3>
+    <a href="#vision">Our vision?</a>
+    <a href="#location">Where we are?</a>
+    <a href="#opening-hours">When are we open?</a>
+    <a href="#accessibility">Do we have any food?</a>
+  </section>
+  <main class="wrapper">
+    <section class="about-vision mt-15" id="vision">
+      <h2>We love science!</h2>
+      <p>
+        Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth
+        to exploring everything from galaxies far away to the very building blocks of life itself.
+      </p>
+      <p>
+        The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps
+        even ignite a lifelong passion to continue the exploration of the world around us.
+      </p>
+      <figure>
+        <img src="./img/biology_skull-340.jpg" alt="a model of a human skull">
+        <figcaption>From biology to cosmology, we aim to introduce as much as possible.</figcaption>
+      </figure>
+      <p>
+        We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have
+        over <strong>1000 different exhibits</strong> on the many varied subjects of science to explore. Many of these
+        exhibits are designed for you to interact with and play around to see science come to life <em>(apart from the
+          dinosaur exhibits – they only come to life at night when everyone’s gone home).</em>
+      </p>
     </section>
-    <section>
+    <hr>
+    <section class="mt-15" id="location">
+      <h3>Location</h3>
+      <div style="width: 100%">
+        <iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=Sommerfeldts%20gate%2074%2C%209009%20Troms%C3%B8+(Community%20Science%20Museum)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          </iframe>
+      </div>
+      <br />
+      <p>
+        The museum is located at: <br><strong>Sommerfeldts gate 74, 9009 Tromsø</strong>.
+      </p>
+      <p><em>On top of the Tromsø City Island. Eet your lunch while you enjoy the view of the Tromsdalspeak and the Ishavs Cathedral.</em></p>
+    </section>
+    <section class="mt-15 mb-15" id="opening-hours">
+      <table>
+        <caption>
+          <h3>Opening Hours</h3>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>10:00 – 16:00</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>10:00 – 16:00</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>10:00 – 16:00</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>10:00 – 19:00</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9:00 – 16:00</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>9:00 – 13:00</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="mt-10">Admission</h3>
+      <p>
+        <strong>The entrance is free for all.</strong>
+      </p>
+      <p>
+        There are guided tours of the museum that leave every hour. <em>These tours are 70 NOK per person and include a handy
+        printed guide of the museum.</em>
+      </p>
+      <p>
+        If you would like to organise a guided tour for your group of 6 or more people, <a href="./contact.html">please contact us</a> to arrange the tour.
+      </p>
+    </section>
+    <hr>
+    <section class="about-accessibility mt-15" id="accessibility">
+      <h3>Food and drink</h3>
+      <p>
+        There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.
+        Shop
+      </p>
+      <p>
+        Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to
+        continue to explore science even after you’ve left the museum.
+      </p>
+      <h3>Accessibility</h3>
+      <p>
+        The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually
+        impaired.
+      </p>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <section class="main-footer__mobile wrapper p-10">
+      <h2>We hope to see you</h2>
+      <div class="main-footer__social-mobile">
+        <img src="img/svg/facebook.svg" alt="facebook logo">
+        <img src="img/svg/twitter.svg" alt="twitter logo">
+        <img src="img/svg/location.svg" alt="location icon with pizza inside">
+      </div>
+      <div class="main-footer__links-mobile mb-15">
+        <a href="/">Birthday?</a>
+        <a href="/">Contact</a>
+        <a href="/">Work</a>
+        <a href="/">Opening hours</a>
+        <a href="/">Learn</a>
+      </div>
+    </section>
+    <section class="hide-small">
       <div>
         <h3>What else do we offer?</h3>
         <ul>
@@ -89,11 +193,11 @@
       <div>
         <h2>Work, research or study</h2>
         <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
+          <li>Contact us</li>
+          <li>Birthay?</li>
+          <li>Work</li>
+          <li>Opening hours</li>
+          <li>Learn</li>
         </ul>
       </div>
       <div>
@@ -101,7 +205,20 @@
       </div>
     </section>
   </footer>
+  <script>
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('.main-navigation__list');
 
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -19,6 +19,18 @@
   background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
   border-radius: 3px;
 }
+
+@media only screen and (min-width: 767px) {
+  .explore-intro {
+    background-image: url('../img/readingboy-900w.jpg');
+    height: 70vh;
+    background-size: 90%;
+  }
+  
+  .explore-intro__heading {
+    width: 60%;
+  }
+}
 /* 7.2 Kids */
 .young_stars {
   background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
@@ -26,7 +38,19 @@
   box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
 }
 
+@media only screen and (min-width: 767px) {
+  .kids {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .kids header {
+    order: -2;
+  }
+  .kids figure {
+    order: -1
+  }
+}
 
 /* 7.3 Teachers */
 
@@ -39,4 +63,38 @@
 .kids, .teachers, .reseachers {
   background-color: hsl(0, 0%, 100%, 0.4);
   box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+@media only screen and (min-width: 767px) {
+  .explore-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .young_stars {
+    order: -1;
+    margin-top: 1rem;
+    flex-shrink: 1;
+  }
+
+  .kids, .teachers, .reseachers {
+    flex: 1 1 30%;
+    margin: 1rem;
+  }
+
+  .kids {
+    margin-left: 0;
+  }
+
+  .reseachers {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .explore-intro {
+    background-size: 80%;
+  }
 }

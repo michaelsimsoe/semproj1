@@ -110,21 +110,39 @@
   display: none;
 }
 
+.hide-md {
+  display: inherit;
+}
+
+
+
+@media (min-width: 500px) {
+  .hide-md {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .wrapper {
-    margin: 0 45px;
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .wrapper {
-    margin: 0 100px;
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+  .hide-lg {
+    display: none;
   }
 }
 
 @media only screen and (min-width: 1224px) {
   .wrapper {
-    margin: 0 200px;
+    margin-right: 20rem;
+    margin-left: 20rem;
   }
 }
 
@@ -141,15 +159,16 @@ html {
 
 html, body {
   background-color: var(--background-color);
+  background-image: linear-gradient(180deg, hsla(180, 4%, 80%, .2),rgba(185, 186, 190, 0.6));
   font-size: 1.8rem;
   line-height: 1.5;
 }
 
-body {
-  background-image: url('../img/cranium-2099084_640-4.png');
-  background-position: 0vw 30vh;
+html {
+  background-image: url('../img/cranium.png');
+  background-position: 45vw 50vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50%;
   background-attachment: fixed;
 }
 
@@ -258,10 +277,6 @@ hr {
   background-color: var(--prim-1-25);
 }
 
-.article-divider {
-  
-}
-
 
 /* 
  * 4.5 Skip to main content for screen reader and keyboard-only users
@@ -293,19 +308,3 @@ a.skip-main:focus, a.skip-main:active {
     font-size:1.2em;
     z-index:999;
 }
-
-/* 
- * 4.6 Background Image
- */
-
- .background {
-   position: fixed;
-   top:0;
-   height: 100vh;
-   width: 100vw;
-   background-image: url('../img/cranium-2099084_640.png');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
-   z-index: -1;
- }

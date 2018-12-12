@@ -1,12 +1,12 @@
 /* 05 Header & Navigation 
  * 5.1 Header
- * 5.2 
+ * 5.2 Navigation
 */
 
 /* 5.1 Header */
 .main_header {
+  background-color: #38aae0;
   background-color: var(--prim-1-55);
-  box-shadow: 1px 1px 1px 0px var(--prim-1-25);
   color: var(--prim-2-55);
   min-height: 8rem;
 }
@@ -16,9 +16,30 @@
   margin-bottom: 0;
 }
 
+.main_header h1 span {
+  display: block;
+}
+
+@media only screen and (min-width: 900px) {
+  .main_header {
+    box-shadow: none;
+    min-height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main_header h1 span {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+}
+
 /* 5.2 Navigation */
 .main-navigation__list {
   align-items: center;
+  background-color: #38aae0;
   background-color: var(--prim-1-55);
   box-shadow: 1px 1px 1px 0px var(--prim-1-25);
   flex-direction: column;
@@ -45,11 +66,6 @@
   top: 0px;
   z-index: 2;
 }
-
-/* Is the even a point doing this on smaller screens? */
-/* .main-navigation__button:hover {
-  background-color: var(--prim-1-55);
-} */
 
 .main-navigation__burger-icon {
   font-size: 5.5rem;
@@ -81,4 +97,58 @@
 .main-navigation__item.current a:before {
   content: "> ";
   color: hsla(42, 100%, 85%, .8)
+}
+
+@media only screen and (min-width: 900px) {
+  .main-navigation {
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .main-navigation {
+    background-color: #38aae0;
+    box-shadow: 1px 1px 0px 0px var(--prim-1-25);
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .nav-wrapper {
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+  }
+  .js .main-navigation__list {
+    box-shadow: none;
+    display: flex;  
+    flex-direction: row;
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .main-navigation__item a {
+    border-bottom: none;
+    text-decoration: none;
+    padding: 0.5rem 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .main-navigation__button {
+    display: none;
+  }
+
+  .main-navigation__item.current {
+    text-decoration: underline;
+  }
+
+  .main-navigation__item.current a:before {
+    content: "";
+  }
+
+  .main-navigation__item a:hover {
+    background-color: var(--prim-1-25);
+  }
+}
+
+@media only screen and (min-width: 1224px) {
 }

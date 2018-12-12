@@ -16,19 +16,19 @@
 <body>
 <header class="main_header">
   <div class="wrapper">
-    <h1>Community <br>Science Museum</h1>
+    <h1>Community <span>Science Museum</span></h1>
     <p class="main_header__subheading">Exlore together</p>
   </div>
   <a class="skip-main" href="#maincontent">Skip to main content</a>
 </header>
 <nav class="main-navigation" role="navigation">
   <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
-    <!-- <span class="close-icon">×</span> -->
     <span class="main-navigation__burger-icon">&#x2630;</span>
     <span class="main-navigation__text">
       Menu
     </span>  
   </button>
+  <div class="nav-wrapper">
   <ul class="main-navigation__list pt-15" id="menu">
     <li class="main-navigation__item current"><a href="./">Home</a></li>
     <li class="main-navigation__item"><a href="./explore.html">Explore</a></li>
@@ -36,37 +36,41 @@
     <li class="main-navigation__item"><a href="./about.html">About Us</a></li>
     <li class="main-navigation__item"><a href="./involved.html">Get Involved</a></li>
   </ul>
+  </div>
 </nav>
 <div class="index-intro">
-  <div class="wrapper p-10">
+  <div class="wrapper p-10 mt-10">
     <blockquote><em>Science should not be confined to the <span>textbook</span>...</em></blockquote>
     <blockquote><strong>but brought to live through <span>exhibitions!</span></strong></blockquote>
   </div>
 </div>
 <main class="wrapper mt-10" id="maincontent">
+  <div class="top-container">
   <aside class="info p-10">
     <h2>Practical Information</h2>
-    <div class="hours mt-10 p-10">
-      <h3>Opening hours</h3>
-      <ul>
-        <li>Monday: Closed</li>
-        <li>Tuesday: 10:00 – 16:00</li>
-        <li>Wednesday: 10:00 – 16:00</li>
-        <li>Thursday: 10:00 – 16:00</li>
-        <li>Friday: 10:00 – 19:00</li>
-        <li>Saturday: 09:00 – 16:00</li>
-        <li>Sunday: 09:00 – 13:00</li>
-      </ul>
-    </div>
-    <div class="entrance mt-10 p-10">
-      <h3>Admission</h3>
-      <p>
-        <strong>The entrance is free for all.</strong>
-      </p>
-      <p>
-        There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy
-        printed guide of the museum.
-      </p>
+    <div class="info__container">
+      <div class="hours mt-10 p-10">
+        <h3>Opening hours</h3>
+        <ul>
+          <li>Monday: Closed</li>
+          <li>Tuesday: 10:00 – 16:00</li>
+          <li>Wednesday: 10:00 – 16:00</li>
+          <li>Thursday: 10:00 – 16:00</li>
+          <li>Friday: 10:00 – 19:00</li>
+          <li>Saturday: 09:00 – 16:00</li>
+          <li>Sunday: 09:00 – 13:00</li>
+        </ul>
+      </div>
+      <div class="entrance mt-10 p-10">
+        <h3>Admission</h3>
+        <p>
+          <strong>The entrance is free for all.</strong>
+        </p>
+        <p>
+          There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy
+          printed guide of the museum.
+        </p>
+      </div>
     </div>
   </aside>
   <article class="intro mt-15 p-10">
@@ -77,7 +81,11 @@
       </p>
     </header>
     <figure>
-      <img src="./img/girl_function-340.jpg" alt="girl looking at mathematical functions">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:500px)" srcset="./img/girl_function-340.jpg">
+        <source media="(min-width: 500px)" srcset="./img/girl_function-900w.jpg">
+        <img src="./img/girl_function-340.jpg" alt="girl looking at mathematical functions">
+      </picture>
       <figcaption class="m-5">Explore the wonders of science together with us.</figcaption>
     </figure>
     <p>
@@ -85,7 +93,8 @@
     </p>
     <a class="btn-link btn-link-purple" href="./about.html">Read More</a>
   </article>
-  <hr class="article-divider mt-10 mb-10">
+  </div>
+  <hr class="article-divider mt-10 mb-10 hide-md">
   <article class="news">
     <header class="">
       <h2>News</h2>
@@ -93,7 +102,8 @@
         Whats happening at the museum?
       </p>
     </header>
-    <section class="news__item">
+    <div class="news__container">
+    <section class="news__item" mt-10>
       <img class="p-10" src="./img/mammoth-340x340.jpg" alt="great museum hall with mammoth on platau">
       <div class="news__text m-5">
         <h3>Night at the museum</h3>
@@ -123,15 +133,22 @@
         <a class="btn-link btn-link-purple" href="./exhibitions.html#power">Read More</a>
       </div>
     </section>
+    <section class="news__item-empty hide-small mt-10"></section>
+    </div>
   </article>
-  <hr class="article-divider mt-10 mb-10">
-  <article class="exhibitions mt-15">
+  <hr class="article-divider mt-10 mb-10 hide-md">
+  <article class="home-exhibitions mt-15">
     <header>
       <h2>Exhibitions</h2>
       <p class="subheading">We offer a wide variety of exhibitions</p>
     </header>
+    <div class="home-exhibitions__container">
     <section class="exhibitions__single">
-      <img src="./img/moon_phases-140x200.jpg" alt="the moon and its phases">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/moon_phases-140x200.jpg">
+        <source media="(min-width: 450px)" srcset="./img/moon_phases-450w.jpg">
+        <img src="./img/moon_phases-450w.jpg" alt="the moon and its phases">
+      </picture>
       <div class="exhibitions__text">
         <h3>Cosmology</h3>
         <p>
@@ -141,7 +158,11 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/great_sea_beast_skeleton-140x200.jpg" alt="skeleton of giant sea dinosaur">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/great_sea_beast_skeleton-140x200.jpg">
+        <source media="(min-width: 450px)" srcset="./img/great_sea_beast_skeleton-450w.jpg">
+        <img src="./img/great_sea_beast_skeleton-450w.jpg" alt="skeleton of giant sea dinosaur">
+      </picture>
       <div class="exhibitions__text">
         <h3>Evolution</h3>
         <p>
@@ -151,7 +172,11 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/biology_torso-140x200.jpg" alt="human torso model with view of insides">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/biology_torso-140x200.jpg">
+        <source media="(min-width: 450px)" srcset="./img/biology_torso-450w.jpg">
+        <img src="./img/biology_torso-450w.jpg" alt="human torso model with view of insides">
+      </picture>
       <div class="exhibitions__text">
         <h3>Biology and Medicine</h3>
         <p>
@@ -161,7 +186,11 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/exhibition_technology-140x200.jpg" alt="">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/exhibition_technology-140x200.jpg">
+        <source media="(min-width: 450px)" srcset="./img/exhibition_technology-450w.jpg">
+        <img src="./img/exhibition_technology-450w.jpg" alt="technology exhibition">
+      </picture>
       <div class="exhibitions__text">
         <h3>Robotics and AI</h3>
         <p>
@@ -171,11 +200,11 @@
       </div>
     </section>
     <section class="exhibitions__single mt-10">
-      <img src="./img/giant_ants-140x200.jpg"
-           srcset="./img/giant_ants-140x200.jpg 460w,
-                  ./img/giant_ants-450w.jpg 1450w"
-           sizes="(min-width: 460px) 1450px" 
-           alt="two giant ants fighting">
+      <picture>
+        <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/giant_ants-140x200.jpg">
+        <source media="(min-width: 450px)" srcset="./img/giant_ants-450w.jpg">
+        <img src="./img/giant_ants-450w.jpg" alt="two giant ants fighting">
+      </picture>
       <div class="exhibitions__text">
         <h3>Ecology</h3>
         <p>
@@ -184,20 +213,29 @@
         <a class="btn-link btn-link-blue" href="./exhibitions.html#ecology">Read More</a>
       </div>
     </section>
+    </div>
   </article>
-  <hr class="article-divider mt-10 mb-10">
+  <hr class="article-divider mt-10 mb-10 hide-md">
   <article class="cta-involved mb-15">
     <h2 class="mb-5">Get Involved</h2>
-    <p>
-      There are various ways you can support the museum. Donations are very welcome and are an important way we keep this
-      museum open and accessible to the whole community.
-    </p>
-    <a class="btn-link btn-link-purple" href="./involved.html">Read More</a>
+    <div class="cta-container">
+      <figure class="hide-small">
+        <img src="./img/scientist_machine-700.jpg" alt="white coated scientist in front of machine">
+        <figcaption class="p-10">The more resources we have. The more cool stuff we all can experience</figcaption>
+      </figure>
+      <div class="cta-text">
+        <p>
+          There are various ways you can support the museum. Donations are very welcome and are an important way we keep this
+          museum open and accessible to the whole community.
+        </p>
+        <a class="btn-link btn-link-purple" href="./involved.html">Read More</a>
+      </div>
+    </div>
   </article>
 </main>
 <footer class="main-footer">
+  <h2>We hope to see you</h2>
   <section class="main-footer__mobile wrapper p-10">
-    <h2>We hope to see you</h2>
     <div class="main-footer__social-mobile">
       <img src="img/svg/facebook.svg" alt="facebook logo">
       <img src="img/svg/twitter.svg" alt="twitter logo">
@@ -208,29 +246,28 @@
       <a href="./contact.html">Contact</a>
       <a href="./explore.html#reseachers">Work</a>
       <a href="./about.html#opening-hours">Opening hours</a>
-      <a href="./explre.html#kids-learn">Learn</a>
+      <a href="./explore.html#kids-learn">Learn</a>
     </div>
   </section>
-  <section class="hide-small">
-    <div>
+  <section class="main-footer__md hide-small wrapper">
+    <div class="main-footer__offer">
       <h3>What else do we offer?</h3>
       <ul>
         <li><a href="./contact.html">Spend your birthday with us?</a></li>
-        
         <li><a href="./about.html#vision">Read about our vision</a></li>
       </ul>
     </div>
-    <div>
-      <h2>Work, research or study</h2>
+    <div class="main-footer__activity">
+      <h3>Work, research or study</h3>
       <ul>
         <li><a href="./contact.html">Contact us</a></li>
         <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
         <li><a href="./about.html#opening-hours">When are we open?</a></li>
-        <li><a href="./explre.html#kids-learn">Learn with us</a></li>
+        <li><a href="./explore.html#kids-learn">Learn with us</a></li>
       </ul>
     </div>
-    <div>
-      <h2>Get in touch thorugh social media</h2>
+    <div class="main-footer__social">
+      <h3>Get in touch thorugh social media</h3>
       <img src="img/svg/facebook.svg" alt="facebook logo">
       <img src="img/svg/twitter.svg" alt="twitter logo">
       <img src="img/svg/location.svg" alt="location icon">

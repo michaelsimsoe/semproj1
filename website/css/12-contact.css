@@ -18,6 +18,12 @@
   border-radius: 3px;
 }
 
+@media only screen and (min-width: 500px) {
+  .contact-intro {
+    height: 75vh;
+  }
+}
+
 /* 11.2 Contact form */
 .contact-form {
   background-color: hsl(0, 0%, 100%, 0.4);
@@ -26,13 +32,66 @@
 
 .contact-form label, .contact-form input {
   display: block;
-} 
+}
+
+.contact-form input {
+  height: 4rem;
+  min-width: 30rem;
+  font-size: 2.1rem;
+  padding: 0.3rem;
+}
+
+.contact-form textarea {
+  min-width: 30rem;
+  font-size: 2.1rem;
+  padding: 0.3rem;
+}
 
 .contact-form button {
   margin: 1rem auto;
 }
 
+@media only screen and (min-width: 500px) {
+  .contact-form textarea {
+    min-width: 99%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-form textarea {
+    min-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .contact-form textarea {
+    min-width: 60rem;
+  }
+
+  .contact-form h2 {
+    text-align: center;
+  }
+
+  .c-form {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .c-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .c-form {
+    width: 40%;
+  }
+}
+
 /* Sent.php */
 .contact-sent {
   min-height: 90vh;
+  text-align: center;
 }

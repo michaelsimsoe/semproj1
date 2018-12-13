@@ -54,8 +54,8 @@
     <a href="#opening-hours">When are we open?</a>
     <a href="#accessibility">Do we have any food?</a>
   </section>
-  <main class="wrapper">
-    <section class="about-vision mt-15 p-10 mb-15" id="vision">
+  <main class="about-main wrapper">
+    <section tabindex="0" class="about-vision mt-15 p-10 mb-15" id="vision">
       <h2>We love science!</h2>
       <p>
         Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth
@@ -66,18 +66,22 @@
         even ignite a lifelong passion to continue the exploration of the world around us.
       </p>
       <figure>
-        <img src="./img/biology_skull-340.jpg" alt="a model of a human skull">
+        <picture>
+          <source media="(min-width: 0px) and (max-width:450px)" srcset="./img/biology_skull-340.jpg">
+          <source media="(min-width: 450px) and (max-width:766px)" srcset="./img/biology_skull-650w.jpg">
+          <!-- <source media="(min-width: 767px)" srcset="./img/pilot-340x340.jpg"> -->
+          <img src="./img/biology_skull-340.jpg" alt="a model of a human skull">
+        </picture>
         <figcaption>From biology to cosmology, we aim to introduce as much as possible.</figcaption>
       </figure>
       <p>
         We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have
         over <strong>1000 different exhibits</strong> on the many varied subjects of science to explore. Many of these
-        exhibits are designed for you to interact with and play around to see science come to life <em>(apart from the
-          dinosaur exhibits – they only come to life at night when everyone’s gone home).</em>
+        exhibits are designed for you to interact with and play around to see science come to life <em>(apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</em>
       </p>
     </section>
     <hr>
-    <section class="about-location mt-15 p-10 mb-15" id="location">
+    <section tabindex="0" class="about-location mt-15 p-10 mb-15" id="location">
       <h3>Location</h3>
       <div class="location-map">
         <iframe src="https://www.google.com/maps/embed/v1/place?q=Sommerfeldts%20gate%2074%2F76%2C%209009%20Troms%C3%B8&key=AIzaSyAeM9yLnOq7uXPp95pphyt_JzSjQQRI8DI"
@@ -89,7 +93,7 @@
       </p>
       <p><em>On top of the Tromsø City Island. Eet your lunch while you enjoy the view of the Tromsdalspeak and the Ishavs Cathedral.</em></p>
     </section>
-    <section class="about-hours mt-15 p-10 mb-15" id="opening-hours">
+    <section tabindex="0" class="about-hours mt-15 p-10 mb-15" id="opening-hours">
       <table>
         <caption>
           <h3>Opening Hours</h3>
@@ -144,7 +148,7 @@
       </p>
     </section>
     <hr>
-    <section class="about-accessibility mt-15 p-10 mb-15" id="accessibility">
+    <section tabindex="0" class="about-accessibility mt-15 p-10 mb-15" id="accessibility">
       <h3>Food and drink</h3>
       <p>
         There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.

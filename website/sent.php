@@ -16,7 +16,7 @@
 </head>
 <body>
 <header class="main_header">
-  <div class="wrapper">
+  <div tabindex="0" class="wrapper">
     <h1>Community <span>Science Museum</span></h1>
     <p class="main_header__subheading">Exlore together</p>
   </div>

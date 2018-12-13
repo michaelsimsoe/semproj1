@@ -28,6 +28,29 @@
   border-radius: 3px;
 }
 
+@media only screen and (min-width: 900px) {
+  .about-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-list h3 {
+    margin: 0 auto;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .about-list a {
+    margin-right: 1rem;
+    flex-shrink: 2;
+  }
+}
+
+/* 9.2 Vision */
+
+
+
 /* 9.3 */
 .location-map {
   width: 100%;
@@ -35,7 +58,8 @@
 }
 
 .location-map iframe {
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 /* 9.4 Opening Hours */
@@ -63,4 +87,17 @@
 .about-vision img {
   width: 100%;
   height: auto;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-main section {
+    flex: 0 1 48%;
+  }
 }

@@ -22,7 +22,7 @@
   </div>
   <a class="skip-main" href="#maincontent">Skip to main content</a>
 </header>
-<nav class="main-navigation" role="navigation">
+<nav class="main-navigation">
   <button class="main-navigation__button" id="toggle" aria-expanded="false" aria-controls="menu">
     <span class="main-navigation__burger-icon">&#x2630;</span>
     <span class="main-navigation__text">
@@ -47,51 +47,6 @@
       <p>A response will be sent to your email<?php echo " " . $_POST["email"];?>.</p>
     </section>
   </main>
-    <footer class="main-footer">
-  <section class="main-footer__mobile wrapper p-10">
-    <h2>We hope to see you</h2>
-    <div class="main-footer__social-mobile">
-      <img src="img/svg/facebook.svg" alt="facebook logo">
-      <img src="img/svg/twitter.svg" alt="twitter logo">
-      <img src="img/svg/location.svg" alt="location icon">
-    </div>
-    <div class="main-footer__links-mobile mb-15">
-      <a href="./contact.html">Birthday?</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./explore.html#reseachers">Work</a>
-      <a href="./about.html#opening-hours">Opening hours</a>
-      <a href="./explre.html#kids-learn">Learn</a>
-    </div>
-  </section>
-  <section class="hide-small">
-    <div>
-      <h3>What else do we offer?</h3>
-      <ul>
-        <li><a href="./contact.html">Spend your birthday with us?</a></li>
-        
-        <li><a href="./about.html#vision">Read about our vision</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Work, research or study</h2>
-      <ul>
-        <li><a href="./contact.html">Contact us</a></li>
-        <li><a href="./explore.html#reseachers">Do your research with us? </a></li>
-        <li><a href="./about.html#opening-hours">When are we open?</a></li>
-        <li><a href="./explre.html#kids-learn">Learn with us</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Get in touch thorugh social media</h2>
-      <img src="img/svg/facebook.svg" alt="facebook logo">
-      <img src="img/svg/twitter.svg" alt="twitter logo">
-      <img src="img/svg/location.svg" alt="location icon">
-    </div>
-  </section>
-
-
-
-
 <footer class="main-footer">
   <h2>We hope to see you</h2>
   <section class="main-footer__mobile wrapper p-10">

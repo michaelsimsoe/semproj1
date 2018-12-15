@@ -40,7 +40,7 @@
   </div>
 </nav>
   <!-- <div class="background"></div> -->
-  <main class="wrapper">
+  <main class="wrapper" id="maincontent">
     <section class="contact-sent">
       <h2>Message Sent!</h2>
       <p>Thank You<?php echo " " . $_POST["name"]; ?>! Your email has bee sent.</p>

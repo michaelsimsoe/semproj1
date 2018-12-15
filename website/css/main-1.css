@@ -1,0 +1,1371 @@
+/* Table of contents */
+/* 
+  01 Reset
+  02 Typography
+  03 General styles and variables
+  04 Header & Navigation
+  06 Index.html
+  07 Explore.html
+  08 Exhibitions.html
+  09 About.html
+  10 Involved.html
+  11 Footer
+  12 Contact.html
+*//* 02 CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+	 License: none (public domain)
+	 * My changes
+	 - Removed <em>, <strong>, reset on line height
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}/* 03 Typography */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 10px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--sec-1-25)
+}/* 04 General styles and variables 
+ * 4.1 Colors - variables
+ * 4.2 Utilities
+ ** 4.2.2 Margin & Padding helpers
+ ** 4.2.3 Screen size helpers
+ * 4.3 General styling - bacic elements
+ * 4.4 General styling - classes
+ * 4.5 Skip to main content
+*/
+
+/* 4.1 Colors 
+ * Two primary colors, blue and yellow
+ * Three secondary colors, purple, orange-red and green
+ * All colors are with darker and lighter accents
+*/
+:root {
+  --background-color: hsla(180, 4%, 80%, .7);
+  /* Primary color 1 - blue */
+  --prim-1-95: hsl(199, 76%, 95%);
+  --prim-1-85: hsl(199, 74%, 85%);
+  --prim-1-65: hsl(199, 73%, 65%);
+  --prim-1-55: hsl(199, 73%, 55%); 
+  --prim-1-45: hsl(199, 73%, 45%);
+  --prim-1-25: hsl(199, 73%, 25%);
+  /* Primary color 2 - yellow */
+  --prim-2-95: hsl(42, 100%, 95%);
+  --prim-2-85: hsl(42, 100%, 85%);
+  --prim-2-65: hsl(42, 100%, 65%);
+  --prim-2-55: hsl(42, 100%, 55%); 
+  --prim-2-45: hsl(42, 100%, 45%);
+  --prim-2-25: hsl(42, 100%, 25%);
+  /* Secondary color 1 - purple */
+  --sec-1-95: hsl(318, 52%, 95%);
+  --sec-1-85: hsl(318, 52%, 85%);
+  --sec-1-65: hsl(318, 51%, 65%);
+  --sec-1-55: hsl(318, 51%, 55%); 
+  --sec-1-45: hsl(318, 51%, 45%);
+  --sec-1-25: hsl(318, 51%, 25%);
+  /* Secondary color 2 - orange-red */
+  --sec-2-95: hsl(16, 85%, 95%);
+  --sec-2-85: hsl(17, 87%, 85%);
+  --sec-2-65: hsl(17, 88%, 65%);
+  --sec-2-55: hsl(17, 88%, 55%); 
+  --sec-2-45: hsl(17, 88%, 45%);
+  --sec-2-25: hsl(17, 88%, 25%);
+  /* Secondary color 3 - green */
+  --sec-3-95: hsl(73, 36%, 95%);
+  --sec-3-85: hsl(73, 37%, 85%);
+  --sec-3-65: hsl(72, 36%, 65%);
+  --sec-3-55: hsl(72, 36%, 55%); 
+  --sec-3-45: hsl(72, 36%, 45%);
+  --sec-3-25: hsl(72, 36%, 25%);
+}
+
+/* 4.2 Utilities 
+ * Utility classes
+*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear:both;
+}
+.wrapper {
+  margin: 0 10px;
+}
+
+/* 4.2.2 Margin & Padding helpers */
+.mt-5 {
+  margin-top: .5rem;
+}
+
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.mt-15 {
+  margin-top: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: .5rem;
+}
+
+.mb-10 {
+  margin-bottom: 1rem;
+}
+.mb-15 {
+  margin-bottom: 1.5rem;
+}
+.m-5 {
+  margin: .5rem;
+}
+
+
+.p-5 {
+  padding: .5rem;
+}
+
+.p-10 {
+  padding: 1rem;
+}
+
+.pt-15 {
+  padding-top: 1.5rem;
+}
+
+/* 4.2.3 Screen size helpers */
+.hide-small {
+  display: none;
+}
+
+.hide-md {
+  display: inherit;
+}
+
+
+
+@media (min-width: 500px) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .wrapper {
+    margin-right: 20rem;
+    margin-left: 20rem;
+  }
+}
+
+/* 4.3 General styling - basic elements 
+ * Styling common to all pages of site
+*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  background-color: var(--background-color);
+  background-image: linear-gradient(180deg, hsla(180, 4%, 80%, .2),rgba(185, 186, 190, 0.6));
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+html {
+  background-image: url('../img/cranium.png');
+  background-position: 45vw 50vh;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+}
+
+p {
+  margin: .7rem 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2.0rem;
+}
+
+a {
+  color:  #11516e; 
+}
+
+a:active {
+  color: #39abe0; 
+}
+
+a:hover {
+  color: #1f91c6;
+}
+
+a:visited {
+  color: #782708;
+}
+
+/* The horisontal-rule rule for chromiumbased browsers 
+ * https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
+*/
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto; 
+    -moz-margin-start: auto;
+    -moz-margin-end: auto;
+    border-style: inset;
+    border-width: 1px
+}
+
+@media only screen and (min-width: 767px) {
+  hr {
+    display: none;
+  }
+}
+
+
+/* 4.4 General styling - classes 
+ * Styling common to all pages of site
+*/
+
+.subheading {
+  color: var(--sec-1-45);
+  font-style: italic;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.btn-link {
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 1.4rem .8rem;
+  width: 11rem;
+}
+
+.btn-link:visited, .btn-link:active, .btn-link:hover {
+  color: #fff;
+}
+
+
+.btn-link-purple {
+  background-color: var(--sec-1-55);
+  box-shadow: 1px 1px 1px 0px var(--sec-1-25);
+}
+
+.btn-link-purple:hover {
+  background-color: var(--sec-1-45);
+}
+
+.btn-link-purple:active {
+  background-color: var(--sec-1-25);
+}
+
+.btn-link-blue {
+  background-color: var(--prim-1-55);
+  box-shadow: 1px 1px 1px 0px var(--prim-1-25);
+}
+
+
+.btn-link-blue:hover {
+  background-color: var(--prim-1-45);
+}
+
+.btn-link-blue:active {
+  background-color: var(--prim-1-25);
+}
+
+
+/* 
+ * 4.5 Skip to main content for screen reader and keyboard-only users
+ * https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+ * https://www.w3.org/TR/WCAG20-TECHS/G1.html
+*/
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid var(--prim-2-55);
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+/* 05 Header & Navigation 
+ * 5.1 Header
+ * 5.2 Navigation
+*/
+
+/* 5.1 Header */
+.main_header {
+  background-color: #38aae0;
+  background-color: var(--prim-1-55);
+  color: var(--prim-2-55);
+  min-height: 8rem;
+}
+
+.main_header__subheading {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.main_header h1 span {
+  display: block;
+}
+
+@media only screen and (min-width: 900px) {
+  .main_header {
+    box-shadow: none;
+    min-height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main_header h1 span {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+}
+
+/* 5.2 Navigation */
+.main-navigation__list {
+  align-items: center;
+  background-color: #38aae0;
+  background-color: var(--prim-1-55);
+  box-shadow: 1px 1px 1px 0px var(--prim-1-25);
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.js .main-navigation__list {
+  position: fixed;
+  display: none;  
+  top: 0;
+}
+
+.main-navigation__button {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: var(--prim-1-25);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  justify-content: center;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+.main-navigation__burger-icon {
+  font-size: 5.5rem;
+}
+.main-navigation__list.is-active {
+  display: flex;
+}
+.main-navigation__text {
+  margin: -10px auto 0;
+}
+.main-navigation__item {
+  width: 100%;
+  text-align: center;
+}
+.main-navigation__item a {
+  border-bottom: 1px solid var(--prim-1-25);
+  color: var(--prim-2-55);
+  display: block;
+  min-height: 3rem;
+  text-decoration: none;
+  padding: 2rem;
+  width: 100%;
+}
+
+.main-navigation__item.current a {
+  color: var(--prim-2-85);
+}
+
+.main-navigation__item.current a:before {
+  content: "> ";
+  color: hsla(42, 100%, 85%, .8)
+}
+
+@media only screen and (min-width: 900px) {
+  .main-navigation {
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .main-navigation {
+    background-color: #38aae0;
+    box-shadow: 1px 1px 0px 0px var(--prim-1-25);
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .nav-wrapper {
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+  }
+  .js .main-navigation__list {
+    box-shadow: none;
+    display: flex;  
+    flex-direction: row;
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .main-navigation__item a {
+    border-bottom: none;
+    text-decoration: none;
+    padding: 0.5rem 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .main-navigation__button {
+    display: none;
+  }
+
+  .main-navigation__item.current {
+    text-decoration: underline;
+  }
+
+  .main-navigation__item.current a:before {
+    content: "";
+  }
+
+  .main-navigation__item a:hover {
+    background-color: var(--prim-1-25);
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+}/* 06 index.html - Front page 
+ * 6.1 Hero Image
+ * 6.2 Practical information
+ * 6.3 Introduction
+ * 6.4 News
+ * 6.5 Exhibitions
+ * CTA
+*/
+
+/* 6.1 Intro Section */
+.index-intro {
+  height: 50vh;
+  background-image: url('../img/fasade_outside-400.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-intro div {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+  float: right;
+  width: 50%;
+}
+.hero blockquote:first-of-type {
+  margin-top: 0 ;
+}
+
+@media only screen and (min-width: 767px) {
+  .index-intro {
+    background-image: url('../img/fasade_outside-900.jpg');
+    height: 70vh;
+    background-size: 90%;
+  }
+
+  .index-intro div {
+    max-width: 35%;
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .index-intro {
+    background-size: 80%;
+  }
+
+  .index-intro div {
+    background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.8));
+    max-width: 30%;
+    font-size: 2.4rem;
+  }
+}
+
+/* 6.2 Practical information */
+.info {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hours, .entrance {
+  border: var(--sec-1-25) solid 2px;
+}
+
+@media only screen and (min-width: 500px) {
+  .info__container {
+    flex-direction: row;
+  }
+  .info__container .hours{
+    flex: 1;
+  }
+  .info__container .entrance{
+    flex: 1;
+  }
+
+  .info__container div {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .top-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .top-container aside {
+    flex: 1 1 30%;
+    margin-top: 1.5rem;
+  }
+  .top-container article {
+    flex: 1 1 60%;
+    margin-right: 1.5rem;
+  }
+
+  .info__container {
+    flex-direction: column;
+  }
+}
+
+/* 6.3 Introduction */
+.intro {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+.intro p {
+  margin-top: .5rem;
+}
+
+.intro figure {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.intro img {
+  width: 100%;
+  height: auto;
+}
+
+.intro .btn-link {
+  margin: auto auto .5rem;
+}
+
+
+/* 6.4 News */
+.news {
+}
+
+.news__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.news__item {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.news__item p {
+  font-size: 1.6rem;
+}
+
+.news__item img {
+  width: 100%;
+  height: auto;
+}
+
+.news .btn-link {
+  margin: .5rem auto;
+}
+
+@media only screen and (min-width: 767px) {
+  .news__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .news__container section {
+    flex: 1 1 40%;
+    margin: 1rem;
+  }
+
+  .news__item-empty.hide-small {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .news {
+    margin-top: 2rem;
+  }
+  .news__container section {
+    flex: 1 1 25%;
+    margin: 1rem;
+  } 
+}
+
+/* 6.5 Exhibitions */
+.home-exhibitions__container {
+  display: flex;
+  flex-direction: column;
+}
+.exhibitions__single {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.exhibitions__single img, .exhibitions__single picture {
+  width: 40%;
+  height: auto;
+}
+
+.exhibitions__single picture img {
+  width: 100%;
+  height: 100%;
+  transition: transform 10s;
+}
+
+.exhibitions__single picture {
+  overflow: hidden;
+}
+
+.exhibitions__text {
+  display: flex;
+  margin-left: .5rem;
+  flex-direction: column;
+  width: 60%;
+}
+
+.exhibitions__text .btn-link {
+  margin: auto auto .5rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .exhibitions__single picture img:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home-exhibitions__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .exhibitions__single {
+    flex: 1 1 40%;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  .exhibitions__single picture {
+    width: 50%;
+  }
+
+  .exhibitions__text {
+    width: 50%;
+    font-size: 1.8rem;
+  }
+}
+
+/* CTA */
+.cta-involved .btn-link{
+  margin: 1rem auto;
+}
+
+@media only screen and (min-width: 450px) {
+  .cta-involved {
+    margin-top: 3rem;
+  }
+
+  .cta-involved figure {
+    background-color: hsl(0, 0%, 100%, 0.4);
+    box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+    display: block;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .cta-involved figure img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cta-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .cta-container figure {
+    flex: 1 1 50%;
+    font-size: 1.8rem;
+  }
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    font-size: 2rem;
+    line-height: 2;
+    padding: 0 2rem;
+  }
+
+}
+/* 07 exlpore.html - Info to kids, teachers and researchers
+ * 7.1 Explore Intro
+ * 7.2 Kids
+ * 7.3 Teachers
+ * 7.4 Reasearchers
+ * 7.5 Common
+*/
+
+/* 7.1 Explore Intro */
+.explore-intro {
+  height: 50vh;
+  background-image: url('../img/readingboy-400-360.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.explore-intro__heading {
+  background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 767px) {
+  .explore-intro {
+    background-image: url('../img/readingboy-900w.jpg');
+    height: 70vh;
+    background-size: 90%;
+  }
+  
+  .explore-intro__heading {
+    width: 60%;
+  }
+}
+/* 7.2 Kids */
+.young_stars {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  border: var(--sec-1-25) solid 2px;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+@media only screen and (min-width: 767px) {
+  .kids {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kids header {
+    order: -2;
+  }
+  .kids figure {
+    order: -1
+  }
+}
+
+/* 7.3 Teachers */
+
+/* 7.5 Common */
+.kids img, .teachers img, .reseachers img {
+  width: 100%;
+  height: auto;
+}
+
+.kids, .teachers, .reseachers {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+@media only screen and (min-width: 767px) {
+  .explore-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .young_stars {
+    order: -1;
+    margin-top: 1rem;
+    flex-shrink: 1;
+  }
+
+  .kids, .teachers, .reseachers {
+    flex: 1 1 30%;
+    margin: 1rem;
+  }
+
+  .kids {
+    margin-left: 0;
+  }
+
+  .reseachers {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .explore-intro {
+    background-size: 80%;
+  }
+}/* 08 exlpore.html - Info to kids, teachers and researchers
+ * 8.1 Exhibitions intro
+ * 8.2 Special Events (common breakpoints breakpoints)
+ * 8.3 Exhibitions
+ * 8.4 Common
+*/
+
+/* 8.1 Exhibitions intro */
+.exhibition-list {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  border: var(--sec-1-25) solid 2px;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+  display: flex;
+  flex-direction: column;
+}
+.exhibitions-intro {
+  height: 50vh;
+  background-image: url('../img/dome_ceiling-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 767px) {
+  .exhibitions-intro {
+    padding-top: 1rem;
+  }
+  .exhibitions-intro__heading {
+    background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
+    border-radius: 3px;
+    width: 30%;
+    padding: 1rem;
+    
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .exhibition-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .exhibition-list h3 {
+    margin: 0 auto;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .exhibition-list a {
+    margin-right: 1rem;
+    flex-shrink: 2;
+  }
+}
+
+/* 8.2 Special Events (and exhibitions breakpoints)*/
+@media only screen and (min-width: 767px) {
+  .special-events, .exhibitions {
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .special-events header, .exhibitions h2  {
+    flex-shrink: 1;
+    width: 100%;
+  }
+  
+  .special-events section {
+    flex-shrink: 2;
+    width: 33%;
+  }
+
+}
+
+
+/* 8.3 Exhibitions */
+
+.exhibitions h3 {
+  border-bottom: solid 1px var(--sec-1-25);
+  margin-bottom: .5rem;
+}
+
+.exhibition__info {
+  /* font-size: 1rem; // Why does this make it smaller?? */
+  font-size: .8em;
+}
+
+@media only screen and (min-width: 767px) {
+  .exhibitions section {
+    flex-shrink: 2;
+    max-width: 49%;
+  }
+
+}
+
+@media only screen and (min-width: 1224px) {
+  .exhibitions section {
+    max-width: 33%;
+  }
+
+}
+
+/* 8.4 Common */
+.special-events figure, .exhibitions figure {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.special-events img, .exhibitions img {
+  width: 100%;
+  height: auto;
+}
+
+.special-events section, .exhibitions section {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}/* 09 about.html - About page 
+ * 9.1 About
+ * 9.2 Vision
+ * 9.3 Location
+ * 6.4 Opening Hours
+ * 6.5 Accessability
+ * 6.6 Common
+
+/* 9.1 About intro */
+.about-intro {
+  height: 50vh;
+  background-image: url('../img/library-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-list {
+  background-image: linear-gradient(180deg, hsl(0, 0%, 100%, 0.2),hsl(0, 0%, 100%, 0.6));
+  border: var(--sec-1-25) solid 2px;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-intro__heading {
+  background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-list h3 {
+    margin: 0 auto;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .about-list a {
+    margin-right: 1rem;
+    flex-shrink: 2;
+  }
+}
+
+/* 9.2 Vision */
+
+
+
+/* 9.3 */
+.location-map {
+  width: 100%;
+  height: 400px;
+}
+
+.location-map iframe {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* 9.4 Opening Hours */
+.about-hours table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.about-hours tr:nth-child(even) {
+  background-color: var(--sec-1-85);
+}
+
+/* 9.6 Common */
+.about-vision figure {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.about-vision, .about-location, .about-hours, .about-accessibility {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.about-vision img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-main section {
+    flex: 0 1 48%;
+  }
+}/* 10 index.html - Front page 
+ * 10.1 Intro
+ * 10.2 Support Section
+ * 10.3 Volunteer Section
+ * 10.4 Internship Secition
+ * 10.5 Common
+*/
+
+.involved-intro {
+  height: 50vh;
+  background-image: url('../img/steel_web-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.involved-intro__heading {
+  background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5));
+  border-radius: 3px;
+}
+
+/* 10.5 Common */
+.involved-support, .involved-volunteer, .involved-internships {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+@media only screen and (min-width: 900px) {
+  .involved-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .involved-main section {
+    flex: 0 1 49%;
+  }
+}/* 11 Footer
+ *
+*/
+
+.main-footer {
+  background-color: #38aae0;
+  background-color: var(--prim-1-55);
+  color: var(--prim-2-55);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer__mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer h2 {
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.main-footer__social-mobile {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-footer__social-mobile img {
+  flex-grow: 1;
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.main-footer__links-mobile {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .main-footer__mobile {
+    display: none;
+  }
+
+  .main-footer__md {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+  }
+
+  .main-footer__offer {
+  }
+
+  .main-footer__social img {
+    max-width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1224px) {
+}/* 11 contact.html - Contact form 
+ * 11.1 Intro
+ * 11.2 Contact form
+ * 12.1 Sent.php
+*/
+
+/* 11.1 Intro */
+.contact-intro {
+  height: 50vh;
+  background-image: url('../img/colored_bulbs-1200.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-intro__heading {
+  /* background-image: linear-gradient(100deg, hsl(0, 0%, 100%, 0.9),hsl(0, 0%, 100%, 0.5)); */
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 500px) {
+  .contact-intro {
+    height: 75vh;
+  }
+}
+
+/* 11.2 Contact form */
+.contact-form {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  box-shadow: 1px 1px 1px 0px hsla(0,0%,0%,0.4);
+}
+
+.contact-form label, .contact-form input {
+  display: block;
+}
+
+.contact-form input {
+  height: 4rem;
+  min-width: 30rem;
+  font-size: 2.1rem;
+  padding: 0.3rem;
+}
+
+.contact-form textarea {
+  min-width: 30rem;
+  font-size: 2.1rem;
+  padding: 0.3rem;
+}
+
+.contact-form button {
+  margin: 1rem auto;
+}
+
+@media only screen and (min-width: 500px) {
+  .contact-form textarea {
+    min-width: 99%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-form textarea {
+    min-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .contact-form textarea {
+    min-width: 60rem;
+  }
+
+  .contact-form h2 {
+    text-align: center;
+  }
+
+  .c-form {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .c-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .c-form {
+    width: 40%;
+  }
+}
+
+/* Sent.php */
+.contact-sent {
+  min-height: 90vh;
+  text-align: center;
+}
